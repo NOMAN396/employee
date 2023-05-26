@@ -18,7 +18,7 @@
 					</a>
 					<div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="<?= $base_url?>emp_salary_list.php">All Employees</a>
+							<a class="nav-link" href="<?= $base_url?>employee_list.php">All Employees</a>
 							<a class="nav-link" href="#">Employee Leave</a>
 							<a class="nav-link" href="#">Departments</a>
 							<a class="nav-link" href="#">Designations</a>
@@ -42,7 +42,7 @@
 							<a class="nav-link" href="layout-sidenav-light.html">Payslip</a>
 							<a class="nav-link" href="layout-sidenav-light.html">Payroll Items</a>
 						</nav>
-					</div>
+					</div><br>
 
 
 
