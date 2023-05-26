@@ -1,11 +1,11 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Employee</h1>
+    <h1 class="mt-4 text-center">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Employee_List</li>
+        <li class="breadcrumb-item active mx-auto">Employee_List</li>
     </ol>
-    <a href="#"class="btn btn-primary align-right">ADD NEW</a>
+    <a href="<?= $base_url?>employee_create.php"class="btn btn-primary align-right">ADD NEW</a>
     <table class="table">
         <tr>
             <th>ID</th>
@@ -28,23 +28,23 @@
                     foreach($data['data'] as $d){
                 ?>
         <tr>
-            <td><?= $d->ID ?></td>
-            <td><?= $d->First_name ?></td>
-            <td><?= $d->Last_name ?></td>
-            <td><?= $d->User_name ?></td>
-            <td><?= $d->Email ?></td>
-            <td><?= $d->Password ?></td>
-            <td><?= $d->Phone ?></td>
-            <td><?= $d->Employee_ID ?></td>
-            <td><?= $d->Department ?></td>
-            <td><?= $d->Designation ?></td>
-            <td><?= $d->Joining_Date ?></td>
-            <td><?= $d->Picture ?></td>
+            <td><?= $d->id ?></td>
+            <td><?= $d->first_name ?></td>
+            <td><?= $d->last_name ?></td>
+            <td><?= $d->user_name ?></td>
+            <td><?= $d->email ?></td>
+            <td><?= $d->password ?></td>
+            <td><?= $d->phone ?></td>
+            <td><?= $d->employee_ID ?></td>
+            <td><?= $d->department ?></td>
+            <td><?= $d->designation ?></td>
+            <td><?= $d->joining_Date ?></td>
+            <td><?= $d->image ?></td>
             <td>
-                <a title="Update" href="user_edit.php?id=<?= $d->id ?>">
+                <a title="Update" href="<?= $base_url?>employee_edit.php?id=<?= $d->id ?>">
                             <i class="fa fa-edit"></i>
                 </a>
-                <a title="Delete" class="text-danger" href="user_delete.php?id=<?= $d->id ?>">
+                <a title="Delete" class="text-danger" href="employee_delete.php?id=<?= $d->id ?>">
                             <i class="fa fa-trash"></i>
                 </a>
             </td>
