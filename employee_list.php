@@ -13,7 +13,7 @@
             <th>Last Name</th>
             <th>User name</th>
             <th>Email</th>
-            <th>Password</th>
+           
             <th>Phone</th>
             <th>Employee_ID</th>
             <th>Department</th>
@@ -33,13 +33,13 @@
             <td><?= $d->last_name ?></td>
             <td><?= $d->user_name ?></td>
             <td><?= $d->email ?></td>
-            <td><?= $d->password ?></td>
+           
             <td><?= $d->phone ?></td>
             <td><?= $d->employee_ID ?></td>
             <td><?= $d->department ?></td>
             <td><?= $d->designation ?></td>
             <td><?= $d->joining_Date ?></td>
-            <td><?= $d->image ?></td>
+            <td><img src="upload/users/<?= $d->image ?>" width="50px" alt=""></td>
             <td>
                 <a title="Update" href="<?= $base_url?>employee_edit.php?id=<?= $d->id ?>">
                             <i class="fa fa-edit"></i>
