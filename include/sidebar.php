@@ -20,8 +20,8 @@
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link" href="<?= $base_url?>employee_list.php">All Employees</a>
 							<a class="nav-link" href="#">Employee Leave</a>
-							<a class="nav-link" href="#">Departments</a>
-							<a class="nav-link" href="#">Designations</a>
+							<a class="nav-link" href="<?= $base_url?>department_list.php">Departments</a>
+							<a class="nav-link" href="<?= $base_url?>designation_list.php">Designations</a>
 							<a class="nav-link" href="#">Timesheet</a>
 							<a class="nav-link" href="#">Overtime</a>
 						</nav>
