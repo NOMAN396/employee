@@ -6,7 +6,8 @@
         <li class="breadcrumb-item active">Page Name</li>
     </ol>
     
-    <a href="designation_create.php">Add New</a>
+
+    <a href="holiday_add.php">Add New</a>
     <table class="table">
         <tr>
             <th>#</th>
@@ -16,7 +17,7 @@
             <th>Action</th>
         </tr>
         <?php
-                  $data=$mysqli->common_select('tbl_designations');
+                  $data=$mysqli->common_select('tbl_holidays');
                if(!$data['error']){
                     foreach($data['data'] as $d){
                 ?>
@@ -27,10 +28,10 @@
           
           
             <td>
-                <a title="Update" href="<?= $base_url?>designation_edit.php?id=<?= $d->id ?>">
+                <a title="Update" href="<?= $base_url?>holidays_edit.php?id=<?= $d->id ?>">
                             <i class="fa fa-edit"></i>
                 </a>
-                <a title="Delete" class="text-danger" href="designation_delete.php?id=<?= $d->id ?>">
+                <a title="Delete" class="text-danger" href="holidays_delete.php?id=<?= $d->id ?>">
                             <i class="fa fa-trash"></i>
                 </a>
             </td>
