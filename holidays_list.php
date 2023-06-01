@@ -1,9 +1,9 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Page Name</h1>
+    <h1 class="mt-4">Holidays</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Page Name</li>
+        <li class="breadcrumb-item active">All Holidays</li>
     </ol>
     
 
