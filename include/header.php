@@ -1,9 +1,9 @@
 <?php
-  session_start();
-  if(!isset($_SESSION['userid'])){
-    echo "<script>window.location='login.php'</script>";
-    exit;
-  }
+//   session_start();
+//   if(!isset($_SESSION['userid'])){
+//     echo "<script>window.location='login.php'</script>";
+//     exit;
+//   }
 ?>
 <?php require_once('settings.php') ?>
 <!DOCTYPE html>

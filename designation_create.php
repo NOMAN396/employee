@@ -45,15 +45,15 @@
                         
                   </div>
 
-<?php
+                  <?php
   if($_POST){
     if($_POST['password']){
       $_POST['password']=sha1(md5($_POST['password']));
     }
       
-    $rs=$mysqli->common_create('tbl_department',$_POST);
+    $rs=$mysqli->common_create('tbl_designations',$_POST);
     if(!$rs['error']){
-      echo "<script>window.location='department_list.php'</script>";
+      echo "<script>window.location='designation_list.php'</script>";
     }else{
         echo $rs['error'];
     }
