@@ -12,7 +12,7 @@
             <th>ID</th>
             <th>Designation</th>
             <th>Department</th>
-            <th>Date</th>
+            <th>Action</th>
         </tr>
         <?php
                   $data=$mysqli->common_select('tbl_designations');
@@ -23,7 +23,7 @@
             <td><?= $d->id ?></td>
             <td><?= $d->designation ?></td>
             <td><?= $d->department ?></td>
-            <td><?= $d->date ?></td>
+          
           
             <td>
                 <a title="Update" href="<?= $base_url?>designation_edit.php?id=<?= $d->id ?>">

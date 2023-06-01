@@ -10,7 +10,7 @@
         <tr>
             <th>ID</th>
             <th>Department</th>
-            <th>Date</th>
+           
             <th>Action</th>
         </tr>
         <?php
@@ -21,7 +21,7 @@
         <tr>
             <td><?= $d->id ?></td>
             <td><?= $d->department_name ?></td>
-            <td><?= $d->date ?></td>
+            
           
             <td>
                 <a title="Update" href="<?= $base_url?>department_edit.php?id=<?= $d->id ?>">
