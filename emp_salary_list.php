@@ -26,7 +26,7 @@
             <td><?= $d->name ?></td>
             <td><?= $d->employee_id ?></td>
             <td><?= $d->email ?></td>
-            <td><?= $d->join_date ?></td>
+            <td><?= $d->joining_date ?></td>
             <td><?= $d->designation ?></td>
             <td><?= $d->salary ?></td>
             <td><?= $d->payslip ?></td>

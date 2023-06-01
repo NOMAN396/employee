@@ -58,7 +58,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Employee_ID:</label>
-                                <input type="text" name="employee_ID" class="form-control">
+                                <input type="text" name="employee_id" class="form-control">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -76,7 +76,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Joining_Date:</label>
-                                <input type="date" name="joining_Date" class="form-control">
+                                <input type="date" name="joining_date" class="form-control">
                             </div>
                         </div>
 

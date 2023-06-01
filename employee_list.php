@@ -35,10 +35,10 @@
             <td><?= $d->email ?></td>
            
             <td><?= $d->phone ?></td>
-            <td><?= $d->employee_ID ?></td>
+            <td><?= $d->employee_id ?></td>
             <td><?= $d->department ?></td>
             <td><?= $d->designation ?></td>
-            <td><?= $d->joining_Date ?></td>
+            <td><?= $d->joining_date ?></td>
             <td><img src="upload/users/<?= $d->image ?>" width="50px" alt=""></td>
             <td>
                 <a title="Update" href="<?= $base_url?>employee_edit.php?id=<?= $d->id ?>">

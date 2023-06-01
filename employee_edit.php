@@ -70,7 +70,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Employee_ID:</label>
-                                <input type="text" value="<?= $d->employee_ID ?>" name="employee_ID" class="form-control">
+                                <input type="text" value="<?= $d->employee_id ?>" name="employee_ID" class="form-control">
                             </div>
                         </div>
                         <div class="col-sm-6">
