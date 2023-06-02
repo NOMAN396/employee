@@ -13,7 +13,6 @@
             <th>Last Name</th>
             <th>User name</th>
             <th>Email</th>
-           
             <th>Phone</th>
             <th>Employee_ID</th>
             <th>Department</th>
@@ -33,7 +32,6 @@
             <td><?= $d->last_name ?></td>
             <td><?= $d->user_name ?></td>
             <td><?= $d->email ?></td>
-           
             <td><?= $d->phone ?></td>
             <td><?= $d->employee_id ?></td>
             <td><?= $d->department ?></td>
