@@ -38,13 +38,7 @@
                             <input type="text" value="<?= $d->id ?>" name="id" class="form-control">
                             </div>
                         </div>
-                        <!-- <div class="col-sm-6">
-                            <div class="form-group">
-                            <label>Employee:</label>
-                            <input type="text" value="<?= $d->employee ?>" name="employee" class="form-control">
-                            </div>
-                        </div> -->
-
+                       
                         <div class="col-sm-6">
                             <div class="form-group">
                             <label>Date:</label>
