@@ -59,14 +59,13 @@
                             </div>
                         </div>
 
-                        
-
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Phone:</label>
                                 <input type="text" value="<?= $d->phone ?>" name="phone" class="form-control">
                             </div>
                         </div>
+                        
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Employee_ID:</label>

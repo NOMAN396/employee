@@ -31,7 +31,7 @@
 
 
                 <div class="card-body">
-                  <div class="row ">
+                  <!-- <div class="row "> -->
                         <div class="col-sm-6">
                             <div class="form-group">
                             <label>Leave Type <span class="text-danger">*</span></label>
@@ -45,36 +45,36 @@
                             <div class="form-group">
                             <div class="cal-icon">
                             <label>From <span class="text-danger">*</span></label>
-											<input class="form-control datetimepicker" value="01-01-2019" type="text">
+											<input class="form-control datetimepicker" value="<?= $d->starting_at ?>" type="text">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-9">
                             <div class="form-group">
                             <label>To <span class="text-danger">*</span></label>
 										<div class="cal-icon">
-											<input class="form-control datetimepicker" value="01-01-2019" type="text">
+											<input class="form-control datetimepicker" value="<?= $d->ending_on ?>"  type="text">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-9">
                             <div class="form-group">
                             <label>Number of days <span class="text-danger">*</span></label>
-										<input class="form-control" readonly="" type="text" value="2">
+										<input class="form-control" readonly="" type="text" value="<?= $d->days ?>">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-9">
                             <div class="form-group">
                             <label>Remaining Leaves <span class="text-danger">*</span></label>
-										<input class="form-control" readonly="" value="12" type="text">
+										<input class="form-control" readonly="" value="<?= $d->days ?>" type="text">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-9">
                             <div class="form-group">
                             <label>Leave Reason <span class="text-danger">*</span></label>
-										<textarea rows="4" class="form-control">Going to hospital</textarea>
+										<textarea rows="4" class="form-control" value="<?= $d->reason ?>"></textarea>
                             </div>
                         </div>
         

@@ -20,28 +20,34 @@
                 </div>
                 <div class="card-body">
                   <div class="row ">
-                        <div class="col-sm-6">
+                        <div class="col-sm-8">
                             <div class="form-group">
                             <label>Employee Leaving <span class="text-danger">*</span></label>
 										<select name="employee" class="select">
 										<option>Select Employee</option>
+                    <option value="xyz">xyz</option>
+                    <option value="xyz">xyz</option>
+                    <option value="xyz">xyz</option>
+                    <option value="xyz">xyz</option>
+                    
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        </select>
+                        <div class="col-sm-8 offset-2">
                             <div class="form-group">
                             <label>From <span class="text-danger">*</span></label>
-										<input name="starting_at" class="form-control" type="text">
+										<input name="starting_at" class="form-control" type="date">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-8 offset-2">
                             <div class="form-group">
                             <label>To <span class="text-danger">*</span></label>
 											<input name="ending_on" class="form-control " type="date">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-8 offset-2">
                             <div class="form-group">
                             <label>Number of days <span class="text-danger">*</span></label>
 										<input name="days" class="form-control" type="number">
@@ -49,14 +55,14 @@
                         </div>
 
               
-                        <div class="col-sm-6">
+                        <div class="col-sm-8 offset-2">
                             <div class="form-group">
                             <label>Leave Reason <span class="text-danger">*</span></label>
 										<textarea name="reason" rows="4" class="form-control"></textarea>
                             </div>
                         </div>
                        
-                        <div class="col-sm-6">
+                        <div class="col-sm-8 offset-2">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary form-control">Save</button>
                             </div>
