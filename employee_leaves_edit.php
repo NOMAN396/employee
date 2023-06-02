@@ -35,7 +35,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                             <label>Leave Type <span class="text-danger">*</span></label>
-										<select class="select">
+										<select class="select" name="employee">
 											<option>Select Leave Type</option>
 											<option>Casual Leave 12 Days</option>
 										</select>
@@ -45,7 +45,7 @@
                             <div class="form-group">
                             <div class="cal-icon">
                             <label>From <span class="text-danger">*</span></label>
-											<input class="form-control datetimepicker" value="<?= $d->starting_at ?>" type="text">
+											<input class="form-control datetimepicker" value="<?= $d->starting_at ?>" type="text" name="starting_at">
                             </div>
                         </div>
 
@@ -53,28 +53,28 @@
                             <div class="form-group">
                             <label>To <span class="text-danger">*</span></label>
 										<div class="cal-icon">
-											<input class="form-control datetimepicker" value="<?= $d->ending_on ?>"  type="text">
+											<input class="form-control datetimepicker" value="<?= $d->ending_on ?>" type="text" name="ending_on">
                             </div>
                         </div>
 
                         <div class="col-sm-9">
                             <div class="form-group">
                             <label>Number of days <span class="text-danger">*</span></label>
-										<input class="form-control" readonly="" type="text" value="<?= $d->days ?>">
+										<input class="form-control" type="text" value="<?= $d->days ?>" name="days">
                             </div>
                         </div>
 
                         <div class="col-sm-9">
                             <div class="form-group">
                             <label>Remaining Leaves <span class="text-danger">*</span></label>
-										<input class="form-control" readonly="" value="<?= $d->days ?>" type="text">
+										<input class="form-control" readonly type="text" name=" ">
                             </div>
                         </div>
 
                         <div class="col-sm-9">
                             <div class="form-group">
                             <label>Leave Reason <span class="text-danger">*</span></label>
-										<textarea rows="4" class="form-control" value="<?= $d->reason ?>"></textarea>
+										<textarea rows="5" name="reason" class="form-control" value="<?= $d->reason ?>"></textarea>
                             </div>
                         </div>
         
