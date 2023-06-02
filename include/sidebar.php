@@ -19,12 +19,12 @@
 					<div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link" href="<?= $base_url?>employee_list.php">All Employees</a>
-							<a class="nav-link" href="<?= $base_url?>employee_leave.php"">Employee Leave</a>
+							<a class="nav-link" href="<?= $base_url?>employee_leave.php">Employee Leave</a>
 							<a  class="nav-link" href="<?= $base_url?>holidays_list.php">Holidays</a>
 							<a class="nav-link" href="<?= $base_url?>department_list.php">Departments</a>
 							<a class="nav-link" href="<?= $base_url?>designation_list.php">Designations</a>
 							<a class="nav-link" href="#">Timesheet</a>
-							<a class="nav-link" href="#">Overtime</a>
+							<a class="nav-link" href="<?= $base_url?>overtime_list.php">Overtime</a>
 						</nav>
 					</div>
 
