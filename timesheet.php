@@ -28,8 +28,8 @@
             <td><?= $d->a_date ?></td>
             <td><?= $d->projects ?></td>
             <td><?= $d->a_hours ?></td>
+            <td><?= $d->hours ?></td>
             <td><?= $d->description ?></td>
-            <td><img src="upload/users/<?= $d->image ?>" width="50px" alt=""></td>
             <td>
                 <a title="Update" href="<?= $base_url?>timesheet_edit.php?id=<?= $d->id ?>">
                             <i class="fa fa-edit"></i>
