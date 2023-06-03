@@ -27,6 +27,7 @@
 							<a class="nav-link" href="<?= $base_url?>overtime_list.php">Overtime</a>
 							<a class="nav-link" href="<?= $base_url?>promotion_list.php">Promotion</a>
 							<a class="nav-link" href="<?= $base_url?>termination_list.php">Termination</a>
+							<a class="nav-link" href="<?= $base_url?>resignation_list.php">Resignation</a>
 						</nav>
 					</div>
 
