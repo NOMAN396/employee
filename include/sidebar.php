@@ -23,7 +23,7 @@
 							<a  class="nav-link" href="<?= $base_url?>holidays_list.php">Holidays</a>
 							<a class="nav-link" href="<?= $base_url?>department_list.php">Departments</a>
 							<a class="nav-link" href="<?= $base_url?>designation_list.php">Designations</a>
-							<a class="nav-link" href="#">Timesheet</a>
+							<a class="nav-link" href="<?= $base_url?>timesheet.php">Timesheet</a>
 							<a class="nav-link" href="<?= $base_url?>overtime_list.php">Overtime</a>
 						</nav>
 					</div>

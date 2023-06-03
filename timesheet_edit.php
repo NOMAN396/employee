@@ -3,7 +3,7 @@
 <div class="container-fluid px-4">
     <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Emoloyee Leaves</li>
+        <li class="breadcrumb-item active">TIMESHEET</li>
     </ol>
     
     <section class="content">
@@ -14,12 +14,12 @@
             <div class="card card-danger">
               <form enctype="multipart/form-data" action="" method="post">
                 <div class="card-header">
-                  <h3 class="card-title"> Edit Employee Leaves</h3>
+                  <h3 class="card-title"> Edit Timesheet</h3>
                 </div>
 
                 <?php
                   $where['id']=$_GET['id'];
-                  $data=$mysqli->common_select('tbl_leaves','*',$where);
+                  $data=$mysqli->common_select('tbl_timesheet','*',$where);
                  
                   if(!$data['error'] && count($data['data'])>0)
                     $d=$data['data'][0];
@@ -31,69 +31,66 @@
 
 
                 <div class="card-body">
-                  <!-- <div class="row "> -->
+                  <div class="row ">
                         <div class="col-sm-6">
                             <div class="form-group">
-                            <label>Leave Type <span class="text-danger">*</span></label>
-										<select class="select" name="employee">
-											<option>Select Leave Type</option>
-											<option>Casual Leave 12 Days</option>
-										</select>
+                            <label>ID:</label>
+                            <input type="text" value="<?= $d->id ?>" name="id" class="form-control">
+                            </div>
+                        </div>
+                       
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label>Date:</label>
+                            <input type="text" value="<?= $d->a_date ?>" name="a_date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Projects:</label>
+                                <input type="text" value="<?= $d->projects ?>" name="projects" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Assigned Hours:</label>
+                                <input type="text" value="<?= $d->a_hours ?>" name="a_hours" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Hours:</label>
+                                <input type="text" value="<?= $d->hours ?>" name="hours" class="form-control">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                            <div class="cal-icon">
-                            <label>From <span class="text-danger">*</span></label>
-											<input class="form-control datetimepicker" value="<?= $d->starting_at ?>" type="text" name="starting_at">
+                                <label>Description:</label>
+                                <input type="text" value="<?= $d->description ?>" name="description" class="form-control">
                             </div>
                         </div>
-
-                        <div class="col-sm-9">
-                            <div class="form-group">
-                            <label>To <span class="text-danger">*</span></label>
-										<div class="cal-icon">
-											<input class="form-control datetimepicker" value="<?= $d->ending_on ?>" type="text" name="ending_on">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-9">
-                            <div class="form-group">
-                            <label>Number of days <span class="text-danger">*</span></label>
-										<input class="form-control" type="text" value="<?= $d->days ?>" name="days">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-9">
-                            <div class="form-group">
-                            <label>Remaining Leaves <span class="text-danger">*</span></label>
-										<input class="form-control" readonly type="text" name=" ">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-9">
-                            <div class="form-group">
-                            <label>Leave Reason <span class="text-danger">*</span></label>
-										<textarea rows="5" name="reason" class="form-control" value="<?= $d->reason ?>"></textarea>
-                            </div>
-                        </div>
-        
-                        <div class="col-sm-6">
+                        
+                        <div class="col-sm-12">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary form-control">Save</button>
                             </div>
                         </div>
                   </div>
-                  
+                 
 
 <?php
   if($_POST){
-    $rs=$mysqli->common_update('tbl_leaves',$_POST,$where);
+    
+    $rs=$mysqli->common_update('tbl_timesheet',$_POST,$where);
     if(!$rs['error']){
-      echo "<script>window.location='employee_leave.php'</script>";
+      echo "<script>window.location='timesheet.php'</script>";
     }else{
         echo $rs['error'];
     }
+
   }
 ?>
                 </div>
