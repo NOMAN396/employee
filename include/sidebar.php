@@ -25,6 +25,7 @@
 							<a class="nav-link" href="<?= $base_url?>designation_list.php">Designations</a>
 							<a class="nav-link" href="<?= $base_url?>timesheet.php">Timesheet</a>
 							<a class="nav-link" href="<?= $base_url?>overtime_list.php">Overtime</a>
+							<a class="nav-link" href="<?= $base_url?>promotion_list.php">Promotion</a>
 						</nav>
 					</div>
 
