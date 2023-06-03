@@ -1,11 +1,11 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4">DEPARTMENT LIST</h1>
+    <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Department list</li>
     </ol>
-    <a href="<?= $base_url?>department_create.php">Add New</a>
+    <a href="<?= $base_url?>department_create.php" class="btn btn-primary">Add New</a>
     <table class="table">
         <tr>
             <th>ID</th>

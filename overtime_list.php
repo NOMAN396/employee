@@ -1,9 +1,9 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4 text-center">EMPLOYEE-OVERTIME</h1>
+    <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active mx-auto">Overtime_List</li>
+        <li class="breadcrumb-item active">Overtime</li>
     </ol>
     <a href="<?= $base_url?>overtime_add.php"class="btn btn-primary align-right">ADD NEW</a>
     <table class="table">

@@ -39,6 +39,8 @@
             <td><?= $d->joining_date ?></td>
             <td><img src="upload/users/<?= $d->image ?>" width="50px" alt=""></td>
             <td>
+                <a title="view" href="<?= $base_url?>emp_attendance.php?id=<?= $d->id ?>">
+                            <i class="fa fa-edit"></i>
                 <a title="Update" href="<?= $base_url?>employee_edit.php?id=<?= $d->id ?>">
                             <i class="fa fa-edit"></i>
                 </a>

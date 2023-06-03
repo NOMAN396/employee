@@ -89,7 +89,9 @@
                                 <label>Joining_Date:</label>
                                 <input type="date" value="<?= $d->joining_Date ?>" name="joining_Date" class="form-control">
                             </div>
-                        </div>
+                        </div> 
+
+                    
 
                         <div class="col-sm-6">
                             <div class="form-group">
@@ -125,7 +127,7 @@
       $_POST['password']=sha1(md5($_POST['password']));
     }
       
-    $rs=$mysqli->common_create('tbl_employees',$_POST,$where);
+    $rs=$mysqli->common_update('tbl_employees',$_POST,$where);
     if(!$rs['error']){
       echo "<script>window.location='employee_list.php'</script>";
     }else{
