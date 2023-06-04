@@ -35,13 +35,6 @@
 
                         <div class="col-sm-6">
                             <div class="form-group">
-                            <label>User Name:</label>
-                            <input type="text" name="user_name" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
                                 <label>Email:</label>
                                 <input type="email" name="email" class="form-control">
                             </div>
@@ -62,13 +55,29 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Department:</label>
-                                <input type="text" name="department" class="form-control">
+                                <select class="form-control" id="department_id" name="department_id">
+                                  <?php
+                                      $data=$mysqli->common_select('tbl_department');
+                                      if(!$data['error']){
+                                          foreach($data['data'] as $dt){
+                                  ?>
+                                      <option value="<?= $dt->id ?>"><?= $dt->department_name ?></option>
+                                  <?php } } ?>
+                              </select>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Designation:</label>
-                                <input type="text" name="designation" class="form-control">
+                                <select class="form-control" id="designation_id" name="designation_id">
+                                  <?php
+                                      $data=$mysqli->common_select('tbl_designations');
+                                      if(!$data['error']){
+                                          foreach($data['data'] as $dt){
+                                  ?>
+                                      <option value="<?= $dt->id ?>"><?= $dt->designation ?></option>
+                                  <?php } } ?>
+                              </select>
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -77,13 +86,12 @@
                                 <input type="date" name="joining_date" class="form-control">
                             </div>
                         </div>
-
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Password:</label>
-                                <input type="password" name="password" class="form-control">
+                                <label>Yearly Leave:</label>
+                                <input type="text" name="yearly_leave" class="form-control">
                             </div>
-                        </div>
+                        </div> 
 
                         <div class="col-sm-6">
                             <div class="form-group">

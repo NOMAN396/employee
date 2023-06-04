@@ -40,16 +40,7 @@
                             <input type="text" name="designation" value="<?= $d->designation ?>"class="form-control">
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                            <label>Department Name</label>
-                            <select name="department" id="">
-                                    <option value="HR">HR</option>
-                                    <option value="HR">HR</option>
-                                    <option value="HR">HR</option>
-                            </select>
-                            </div>
-                        </div>
+                        
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary form-control">Save</button>

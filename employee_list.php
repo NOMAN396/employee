@@ -3,7 +3,7 @@
 <div class="container-fluid px-4">
     <h1 class="mt-4 text-center">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active mx-auto">Employee_List</li>
+        <li class="breadcrumb-item active mx-auto">Employee List</li>
     </ol>
    
     <div class="container">
@@ -24,18 +24,23 @@
             <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>User name</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Employee_ID</th>
             <th>Department</th>
             <th>Designation</th>
             <th>Joining Date</th>
+            <th>Yearly Leave</th>
             <th>Picture</th>
             <th>Action</th>
         </tr>
         <?php
-                  $data=$mysqli->common_select('tbl_employees');
+                  $data=$mysqli->common_select_query("SELECT tbl_employees.*, tbl_department.department_name, tbl_designations.designation,
+                  (select sum(days) from tbl_leaves where tbl_leaves.employee_id=tbl_employees.id) as leaved
+                  FROM `tbl_employees`
+                                    join tbl_designations on tbl_designations.id=tbl_employees.designation_id
+                                    join tbl_department on tbl_department.id=tbl_employees.department_id
+                                    WHERE tbl_employees.deleted_at is null");
                if(!$data['error']){
                     foreach($data['data'] as $d){
                 ?>
@@ -43,29 +48,27 @@
             <td><?= $d->id ?></td>
             <td><?= $d->first_name ?></td>
             <td><?= $d->last_name ?></td>
-            <td><?= $d->user_name ?></td>
             <td><?= $d->email ?></td>
             <td><?= $d->phone ?></td>
             <td><?= $d->employee_id ?></td>
-            <td><?= $d->department ?></td>
+            <td><?= $d->department_name ?></td>
             <td><?= $d->designation ?></td>
             <td><?= $d->joining_date ?></td>
+            <td>
+                Leave: <?= $d->yearly_leave ?><br>
+                Remain: <?= ($d->yearly_leave - $d->leaved) ?>
+            </td>
             <td><img src="upload/users/<?= $d->image ?>" width="50px" alt=""></td>
             <td>
-                <a title="view" href="<?= $base_url?>emp_attendance.php?id=<?= $d->id ?>">
-                            <i class="fa fa-edit"></i>
                 <a title="Update" href="<?= $base_url?>employee_edit.php?id=<?= $d->id ?>">
-                            <i class="fa fa-edit"></i>
+                    <i class="fa fa-edit"></i>
                 </a>
                 <a title="Delete" class="text-danger" href="employee_delete.php?id=<?= $d->id ?>">
-                            <i class="fa fa-trash"></i>
+                    <i class="fa fa-trash"></i>
                 </a>
             </td>
         </tr>
-        <?php
-        }
-                  }
-                  ?>
+        <?php } } ?>
         
     </table>
 </div>

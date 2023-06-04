@@ -20,66 +20,61 @@
                 </div>
                 <div class="card-body">
                   <div class="row ">
-                        <div class="col-sm-8">
-                            <div class="form-group">
-                            <label>Employee Leaving <span class="text-danger">*</span></label>
-										<select name="employee" class="select">
-										<option>Select Employee</option>
-                    <option value="xyz">xyz</option>
-                    <option value="xyz">xyz</option>
-                    <option value="xyz">xyz</option>
-                    <option value="xyz">xyz</option>
-                    
-                            </div>
-                        </div>
+                    <div class="col-sm-8 offset-2">
+                      <div class="form-group">
+                        <label>Employee Name <span class="text-danger">*</span></label>
+                        <select class="form-control" id="employee_id" name="employee_id">
+                            <?php
+                                $data=$mysqli->common_select('tbl_employees');
+                                if(!$data['error']){
+                                    foreach($data['data'] as $dt){
+                            ?>
+                                <option value="<?= $dt->id ?>"><?= $dt->employee_id ?> - <?= $dt->first_name ?> <?= $dt->last_name ?></option>
+                            <?php } } ?>
                         </select>
-                        <div class="col-sm-8 offset-2">
-                            <div class="form-group">
-                            <label>From <span class="text-danger">*</span></label>
-										<input name="starting_at" class="form-control" type="date">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-8 offset-2">
-                            <div class="form-group">
-                            <label>To <span class="text-danger">*</span></label>
-											<input name="ending_on" class="form-control " type="date">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-8 offset-2">
-                            <div class="form-group">
-                            <label>Number of days <span class="text-danger">*</span></label>
-										<input name="days" class="form-control" type="number">
-                            </div>
-                        </div>
-
-              
-                        <div class="col-sm-8 offset-2">
-                            <div class="form-group">
-                            <label>Leave Reason <span class="text-danger">*</span></label>
-										<textarea name="reason" rows="4" class="form-control"></textarea>
-                            </div>
-                        </div>
-                       
+                      </div>
+                    </div>
+                    <div class="col-sm-8 offset-2">
+                      <div class="form-group">
+                        <label>From <span class="text-danger">*</span></label>
+										    <input onchange="datecount()" name="starting_at" id="starting_at" class="form-control" type="date">
+                      </div>
+                    </div>
+                    <div class="col-sm-8 offset-2">
+                      <div class="form-group">
+                        <label>To <span class="text-danger">*</span></label>
+											  <input onchange="datecount()" name="ending_on" id="ending_on" class="form-control " type="date">
+                      </div>
+                    </div>
+                    <div class="col-sm-8 offset-2">
+                      <div class="form-group">
+                        <label>Number of days <span class="text-danger">*</span></label>
+										    <input name="days" readonly id="days" class="form-control" type="number">
+                      </div>
+                    </div>
+                    <div class="col-sm-8 offset-2">
+                      <div class="form-group">
+                        <label>Leave Reason <span class="text-danger">*</span></label>
+										    <textarea name="reason" rows="4" class="form-control"></textarea>
+                      </div>
+                    </div>
                         <div class="col-sm-8 offset-2">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary form-control">Save</button>
                             </div>
                         </div>
                   </div>
-                 
-
-<?php
-  if($_POST){
-    $rs=$mysqli->common_create('tbl_leaves',$_POST);
-    if(!$rs['error']){
-      echo "<script>window.location='employee_leave.php'</script>";
-    }else{
-        echo $rs['error'];
-    }
-  }
-?>
+                  <?php
+                    if($_POST){
+                      
+                      $rs=$mysqli->common_create('tbl_leaves',$_POST);
+                      if(!$rs['error']){
+                        echo "<script>window.location='employee_leave.php'</script>";
+                      }else{
+                          echo $rs['error'];
+                      }
+                    }
+                  ?>
                 </div>
                 
               </form>
@@ -97,4 +92,20 @@
 
 </div>
 <?php require_once('include/footer.php') ?>
+<script>
+  function datecount(){
+    let start=new Date(document.querySelector('#starting_at').value);
+    let end=new Date(document.querySelector('#ending_on').value);
+    
+    if(!isNaN(end.getTime())){
+      if(start > end){
+        alert("You cant come back before you go for leave!");
+        document.querySelector('#days').value=0;
+      }else{
+        days = parseInt((end - start) / (1000 * 60 * 60 * 24), 10); 
+        document.querySelector('#days').value=days+1
+      }
+    }
+  }
+</script>
                 

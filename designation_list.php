@@ -11,7 +11,6 @@
         <tr>
             <th>ID</th>
             <th>Designation</th>
-            <th>Department</th>
             <th>Action</th>
         </tr>
         <?php
@@ -22,9 +21,6 @@
         <tr>
             <td><?= $d->id ?></td>
             <td><?= $d->designation ?></td>
-            <td><?= $d->department ?></td>
-          
-          
             <td>
                 <a title="Update" href="<?= $base_url?>designation_edit.php?id=<?= $d->id ?>">
                             <i class="fa fa-edit"></i>

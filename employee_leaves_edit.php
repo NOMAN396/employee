@@ -32,20 +32,25 @@
 
                 <div class="card-body">
                   <!-- <div class="row "> -->
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                            <label>Leave Type <span class="text-danger">*</span></label>
-										<select class="select" name="employee">
-											<option>Select Leave Type</option>
-											<option>Casual Leave 12 Days</option>
-										</select>
-                            </div>
-                        </div>
+                  <div class="col-sm-8 offset-2">
+                      <div class="form-group">
+                        <label>Employee Name <span class="text-danger">*</span></label>
+                        <select class="form-control" id="employee_id" name="employee_id">
+                            <?php
+                                $data=$mysqli->common_select('tbl_employees');
+                                if(!$data['error']){
+                                    foreach($data['data'] as $dt){
+                            ?>
+                                <option value="<?= $dt->id ?>"><?= $dt->employee_id ?> - <?= $dt->first_name ?> <?= $dt->last_name ?></option>
+                            <?php } } ?>
+                        </select>
+                      </div>
+                    </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                             <div class="cal-icon">
                             <label>From <span class="text-danger">*</span></label>
-											<input class="form-control datetimepicker" value="<?= $d->starting_at ?>" type="text" name="starting_at">
+											<input onchange="datecount()" class="form-control" value="<?= $d->starting_at ?>" type="date" name="starting_at">
                             </div>
                         </div>
 
@@ -53,21 +58,14 @@
                             <div class="form-group">
                             <label>To <span class="text-danger">*</span></label>
 										<div class="cal-icon">
-											<input class="form-control datetimepicker" value="<?= $d->ending_on ?>" type="text" name="ending_on">
+											<input onchange="datecount()" class="form-control" value="<?= $d->ending_on ?>" type="date" name="ending_on">
                             </div>
                         </div>
 
                         <div class="col-sm-9">
                             <div class="form-group">
                             <label>Number of days <span class="text-danger">*</span></label>
-										<input class="form-control" type="text" value="<?= $d->days ?>" name="days">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-9">
-                            <div class="form-group">
-                            <label>Remaining Leaves <span class="text-danger">*</span></label>
-										<input class="form-control" readonly type="text" name=" ">
+										        <input class="form-control" readonly type="text" value="<?= $d->days ?>" name="days">
                             </div>
                         </div>
 
@@ -113,4 +111,19 @@
 
 </div>
 <?php require_once('include/footer.php') ?>
-                
+<script>
+  function datecount(){
+    let start=new Date(document.querySelector('#starting_at').value);
+    let end=new Date(document.querySelector('#ending_on').value);
+    
+    if(!isNaN(end.getTime())){
+      if(start > end){
+        alert("You cant come back before you go for leave!");
+        document.querySelector('#days').value=0;
+      }else{
+        days = parseInt((end - start) / (1000 * 60 * 60 * 24), 10); 
+        document.querySelector('#days').value=days+1
+      }
+    }
+  }
+</script>

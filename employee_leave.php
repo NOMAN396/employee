@@ -16,12 +16,14 @@
             <th>Action</th>
         </tr>
         <?php
-                  $data=$mysqli->common_select('tbl_leaves');
+                  $data=$mysqli->common_select_query('SELECT tbl_leaves.*,tbl_employees.first_name,tbl_employees.last_name,tbl_employees.employee_id FROM `tbl_leaves`
+                  join tbl_employees on tbl_employees.id=tbl_leaves.employee_id
+                  WHERE tbl_leaves.deleted_at is null');
                if(!$data['error']){
                     foreach($data['data'] as $d){
                 ?>
         <tr>
-            <td><?= $d->employee ?></td>
+            <td><?= $d->first_name ?> <?= $d->last_name ?> (<?= $d->employee_id ?>)</td>
             <td><?= $d->starting_at ?></td>
             <td><?= $d->ending_on ?></td>
             <td><?= $d->days ?></td>
