@@ -5,7 +5,11 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Payroll Items(Overtime)</li>
     </ol>
-    
+    <div>
+    <a href="<?= $base_url?>payroll_additions.php" class="btn btn-primary">Additions</a>
+    <a href="<?= $base_url?>payroll_deductions.php" class="btn btn-primary">Deductions</a>
+    </div>
+    <hr>
     <div class="col-md-12 d-flex justify-content-end">
     <a href="<?= $base_url?>payroll_additions_add.php" class="btn btn-success px-4">Add New</a>
     </div>

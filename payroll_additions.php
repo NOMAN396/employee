@@ -6,7 +6,6 @@
         <li class="breadcrumb-item active">Payroll Items(Additions)</li>
     </ol>
     <div>
-    <a href="<?= $base_url?>payroll_additions.php" class="btn btn-primary">Additions</a>
     <a href="<?= $base_url?>payroll_overtime.php" class="btn btn-primary">Overtime</a>
     <a href="<?= $base_url?>payroll_deductions.php" class="btn btn-primary">Deductions</a>
     </div>
