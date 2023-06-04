@@ -44,7 +44,7 @@
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link" href="<?= $base_url?>emp_salary_list.php">Employee salary</a>
 							<a class="nav-link" href="layout-sidenav-light.html">Payslip</a>
-							<a class="nav-link" href="layout-sidenav-light.html">Payroll Items</a>
+							<a class="nav-link" href="<?= $base_url?>payroll_additions.php">Payroll Items</a>
 						</nav>
 					</div><br>
 
