@@ -28,7 +28,7 @@
                 <?= $d->att_status==1?"Present":"Absent" ?>
             </td>
             <td>
-                <a title="Update" href="<?= $base_url?>department_edit.php?id=<?= $d->id ?>">
+                <a title="Update" href="<?= $base_url?>attendance_edit.php?id=<?= $d->id ?>">
                     <i class="fa fa-edit"></i>
                 </a>
             </td>
