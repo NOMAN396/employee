@@ -10,10 +10,9 @@
         <tr>
             <th>ID</th>
             <th>Employee</th>
-            <th>Overtime_Date</th>
+            <th>Overtime Date</th>
             <th>Hours</th>
             <th>Type</th>
-           
             <th>Description</th>
             <th>Action</th>
         </tr>

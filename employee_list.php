@@ -1,20 +1,18 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4 text-center">EMPLOYEE</h1>
+    <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active mx-auto">Employee List</li>
+        <li class="breadcrumb-item active">Employee List</li>
     </ol>
    
-    <div class="container">
+    <div class="container-fluid">
         <div class="row ">
-            <div class="col-md-4">
-            <a href="<?= $base_url?>employee_create.php"class="btn btn-primary align-right">ADD NEW</a>
-            </div>
-            <div class="col-md-4 ms-auto">
-                <form action="search.php" method="GET" class="form-inline my-2 my-lg-0">
-                    <input class="rounded" type="search" name="query" placeholder="Search...">
-                    <button class="btn btn-success p-1" type="submit">Search</button>
+            <div class="col-md-12">
+            <a href="<?= $base_url?>employee_create.php"class="btn btn-primary float-start mt-3">ADD NEW</a>
+                <form action="search.php" method="GET" class="form-inline float-end">
+                    <input class="rounded px-3 py-2" type="search" name="query" placeholder="Search...">
+                    <button class="btn btn-success py-2 px-3 my-3" type="submit">Search</button>
                 </form>
             </div>
         </div>
