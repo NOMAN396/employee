@@ -1,9 +1,9 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4 text-center">EMPLOYEE</h1>
+    <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active mx-auto">Timesheet</li>
+        <li class="breadcrumb-item active">Timesheet</li>
     </ol>
     <a href="<?= $base_url?>timesheet_create.php"class="btn btn-primary align-right">ADD NEW</a>
     <table class="table">

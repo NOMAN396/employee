@@ -5,7 +5,20 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active mx-auto">Employee_List</li>
     </ol>
-    <a href="<?= $base_url?>employee_create.php"class="btn btn-primary align-right">ADD NEW</a>
+   
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4">
+            <a href="<?= $base_url?>employee_create.php"class="btn btn-primary align-right">ADD NEW</a>
+            </div>
+            <div class="col-md-4 ms-auto">
+                <form action="search.php" method="GET" class="form-inline my-2 my-lg-0">
+                    <input class="rounded" type="search" name="query" placeholder="Search...">
+                    <button class="btn btn-success p-1" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <table class="table">
         <tr>
             <th>ID</th>
