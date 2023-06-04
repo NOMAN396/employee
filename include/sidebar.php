@@ -19,13 +19,13 @@
 					<div class="collapse" id="colemp" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link" href="<?= $base_url?>employee_list.php">All Employees</a>
-							<a class="nav-link" href="<?= $base_url?>attendance_list.php">All Attendance</a>
+							<a class="nav-link" href="<?= $base_url?>attendance_list.php">Employee Attendance</a>
 							<a class="nav-link" href="<?= $base_url?>employee_leave.php">Employee Leave</a>
-							<a  class="nav-link" href="<?= $base_url?>holidays_list.php">Holidays</a>
+							<!-- <a  class="nav-link" href="<?= $base_url?>holidays_list.php">Holidays</a> -->
 							<a class="nav-link" href="<?= $base_url?>department_list.php">Departments</a>
 							<a class="nav-link" href="<?= $base_url?>designation_list.php">Designations</a>
-							<a class="nav-link" href="<?= $base_url?>timesheet.php">Timesheet</a>
-							<a class="nav-link" href="<?= $base_url?>overtime_list.php">Overtime</a>
+							<!-- <a class="nav-link" href="<?= $base_url?>timesheet.php">Timesheet</a> -->
+							<a class="nav-link" href="<?= $base_url?>overtime_list.php"> Employee Overtime</a>
 						</nav>
 					</div>
 
@@ -37,7 +37,7 @@
 					</a>
 					<div class="collapse" id="colhr" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="<?= $base_url?>emp_salary_list.php">Employee salary</a>
+							<a class="nav-link" href="<?= $base_url?>employee_salary_list.php">Employee salary</a>
 							<a class="nav-link" href="layout-sidenav-light.html">Payslip</a>
 							<a class="nav-link" href="<?= $base_url?>payroll_additions.php">Payroll Items</a>
 						</nav>
