@@ -25,14 +25,11 @@
                             <input type="text" name="department_name" class="form-control">
                                 <button type="submit" class="btn btn-primary my-2 p-2 px-5">Save</button>
                             </div>
-                        </div>
-                     
-                        
+                        </div>   
                   </div>
 
 <?php
   if($_POST){
-
     $rs=$mysqli->common_create('tbl_department',$_POST);
     if(!$rs['error']){
       echo "<script>window.location='department_list.php'</script>";
@@ -52,10 +49,6 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
-
-
-
-
 
 </div>
 <?php require_once('include/footer.php') ?>
