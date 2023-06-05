@@ -14,7 +14,7 @@
             <div class="card card-danger">
               <form enctype="multipart/form-data" action="" method="post">
                 <div class="card-header">
-                  <h3 class="card-title">Employee Information</h3>
+                  <h3 class="card-title"> Edit Employee Information</h3>
                 </div>
 
                 <?php
@@ -111,8 +111,10 @@
                             <div class="form-group">
                                 <label>Picture:</label>
                                 <input type="file" name="image" class="form-control">
-                                <button type="submit" class="btn btn-primary ">Save</button>
                             </div>
+                        </div>
+                        <div>
+                        <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
                         </div>
                   </div>
                  
