@@ -14,7 +14,7 @@
             <div class="card card-danger">
               <form enctype="multipart/form-data" action="" method="post">
                 <div class="card-header">
-                  <h3 class="card-title">Emoloyee Information</h3>
+                  <h3 class="card-title">Employee Information</h3>
                 </div>
 
                 <?php

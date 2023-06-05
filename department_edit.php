@@ -11,10 +11,10 @@
         <div class="row">
           <div class="col-md-12">
 
-            <div class="card card-danger">
+            <div class="content">
               <form enctype="multipart/form-data" action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title">Emoloyee Information</h3>
+                <div class="head">
+                  <h3 class="title">Emoloyee Information</h3>
                 </div>
 
                 <?php
@@ -30,7 +30,7 @@
                 ?>
 
 
-                <div class="card-body">
+                <div class="body">
                   <div class="row ">
                         <div class="col-sm-6">
                             <div class="form-group">
@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary form-control">Save</button>
                             </div>
