@@ -1,48 +1,67 @@
-<?php require_once('include/header.php') ?>
-<?php require_once('include/sidebar.php') ?>
-<div class="container-fluid px-4">
-    <h1 class="mt-4">Page Name</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Page Name</li>
-    </ol>
-    <?php
-                  $where['id']=$_GET['id'];
-                  $data=$mysqli->common_select('tbl_attendance','*',$where);
-                 
-                  if(!$data['error'] && count($data['data'])>0)
-                    $d=$data['data'][0];
-                  else{
-                    echo "<h2 class='text-danger text-center'>This url is not correct</h2>";
-                    exit;
-                  }
-                ?>
+<?php
+require_once('include/header.php');
+require_once('include/sidebar.php');
 
-<form action="" method="post">
-  employee:
-  <input type="text" value="<?= $d->employee_id ?> - <?= $d->first_name ?> <?= $d->last_name ?>" name="employee_id" id="">
-  status
-  <select name="" id="" value=" <?= $d->att_status==1?"Present":"Absent" ?>">
-  <option value="<?= $d->att_status==1?"Present":"Absent" ?>">present</option>
-  <option value="<?= $d->att_status==1?"Present":"Absent" ?>">absent</option>
-</select>
-  <button type="submit">save</button>
-</form>
+
+if ($_GET['id']) {
+   
+    $id = $_GET['id'];
+    
+   
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   
+        $newStatus = $_POST['status'];
+        
+       
+        header("Location:attendance_show.php");
+      
+    }
+    
+   
+    $data = $mysqli->common_select_query("SELECT tbl_attendance.*,tbl_employees.first_name,tbl_employees.last_name, tbl_employees.employee_id
+        FROM `tbl_attendance` 
+        JOIN tbl_employees ON tbl_employees.id = tbl_attendance.employee_id
+        WHERE tbl_attendance.id = $id");
+    
+    
+    if (!$data['error'] && !empty($data['data'])) {
+        $att_record = $data['data'][0];
+?>
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Attendance</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Attendance Edit - ID: <?= $att_record->id ?></li>
+    </ol>
+    
+    <form method="POST" action="">
+        <div class="form-group">
+            <label for="employee">Employee:</label>
+            <input type="text" class="form-control" id="employee" name="employee" value="<?= $att_record->employee_id ?> - <?= $att_record->first_name ?> <?= $att_record->last_name ?>" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <select class="form-control" id="status" name="status">
+                <option value="1" <?= $att_record->att_status == 1 ? 'selected' : '' ?>>Present</option>
+                <option value="0" <?= $att_record->att_status == 0 ? 'selected' : '' ?>>Absent</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
 
 
 <?php
-  if($_POST){
-    if($_POST['password']){
-      $_POST['password']=sha1(md5($_POST['password']));
+    } else {
+       
+        echo "<div class='container-fluid px-4'>Attendance record not found.</div>";
     }
-      
-    $rs=$mysqli->common_update('tbl_attendance',$_POST,$where);
-    if(!$rs['error']){
-      echo "<script>window.location='attendance_show.php'</script>";
-    }else{
-        echo $rs['error'];
-    }
-  }
+} else {
+  
+    echo "<div class='container-fluid px-4'>Invalid request. Attendance ID is missing.</div>";
+}
+
+require_once('include/footer.php');
 ?>
-</div>
-<?php require_once('include/footer.php') ?>
-                
