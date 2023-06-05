@@ -7,15 +7,15 @@
     </ol>
     
     <section class="content">
-      <div class="container-fluid">
+
         <div class="row">
           <div class="col-md-12">
 
-            <div class="card card-danger">
+            
               <form enctype="multipart/form-data" action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title"> Edit Employee Termination</h3>
-                </div>
+               
+                  <h3 class="title"> Edit Employee Termination</h3>
+              
 
                 <?php
                   $where['id']=$_GET['id'];
@@ -30,10 +30,10 @@
                 ?>
 
 
-              <div class="card-body">
-                  <!-- <div class="row "> -->
-                    <div class="col-sm-8 offset-2">
-                            <div class="form-group">
+              <div class="body">
+                  
+                    <div class="col-sm-8">
+                           
                             <label>Terminated Employee <span class="text-danger">*</span></label>
 										        
                             <select class="form-control" id="department_id" name="terminated_employee">
@@ -46,10 +46,10 @@
                                   <?php } } ?>
                               </select>
                             </div>
-                          </div>
+                        
 
-                          <div class="col-sm-8 offset-2">
-                            <div class="form-group">
+                          <div class="col-sm-8">
+                           
                             <label>Department <span class="text-danger">*</span></label>
                             <select class="form-control" id="department_id" name="department">
                                   <?php
@@ -62,8 +62,8 @@
                               </select>
                             
                             </div>
-                        </div>
-                          <div class="col-sm-8 offset-2">
+                        
+                          <div class="col-sm-8">
                         <div class="form-group">
                         <label>Termination Type <span class="text-danger">*</span></label>
                         <select name="termination_type" value="<?= $d->termination_type?>" class="form-control " type="text">
@@ -73,30 +73,30 @@
                           </div>
                           </div>
 
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
                             <label>Termination Date<span class="text-danger">*</span></label>
                             <input name="termination_date" value="<?= $d->termination_date ?>" class="form-control" type="date">	
                             </div>
                         </div>
 
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
                             <label>Reason<span class="text-danger">*</span></label>
 							      <textarea name="reason" value="<?= $d->reason ?>" class="form-control" type="text"></textarea>
                             </div>
                           </div>
 
-                          <div class="col-sm-8 offset-2">
+                          <div class="col-sm-8">
                             <div class="form-group">
                             <label>Notice Date<span class="text-danger">*</span></label>
                             <input name="notice_date" value="<?= $d->notice_date ?>" class="form-control" type="date">	
                             </div>
                         </div>
                        
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary form-control">Save</button>
+                                <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
                             </div>
                         </div>
                   

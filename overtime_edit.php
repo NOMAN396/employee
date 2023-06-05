@@ -7,7 +7,6 @@
     </ol>
 
  <section class="content">
-      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
 
@@ -30,27 +29,26 @@
                   }
                 ?>
 
-                <!-- <div class="body">
-                  <div class="row "> -->
-                    <div class="col-sm-6">
+
+                   
                     <form method="POST">
-									<div class="form-group">
+									<div class="form-group col-sm-7">
 										<label>Employee Name <span class="text-danger">*</span></label>
 										<input name="employee" class="form-control" value="<?= $d->employee ?>" required type="text">
 									</div>
-									<div class="form-group">
+									<div class="form-group col-sm-7">
 										<label>Overtime Date<span class="text-danger">*</span></label>
 										<input class="form-control" name="overtime_date" value="<?= $d->overtime_date ?>" required type="date">
 									</div>
-									<div class="form-group">
+									<div class="form-group col-sm-7">
 										<label>Type <span class="text-danger">*</span></label>
 										<input class="form-control" name="type" value="<?= $d->type ?>" required type="text">
 									</div>
-									<div class="form-group">
+									<div class="form-group col-sm-7">
 										<label>Hours<span class="text-danger">*</span></label>
 										<input class="form-control" name="hours" value="<?= $d->hours ?>" required type="time">
 									</div>
-									<div class="form-group">
+									<div class="form-group col-sm-7">
 										<label>Description<span class="text-danger">*</span></label>
 										<input class="form-control" name="description" value="<?= $d->description ?>" required type="text">
 									</div>

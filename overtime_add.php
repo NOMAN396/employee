@@ -7,15 +7,14 @@
     </ol>
 
  <section class="content">
-      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
 
             <div class="content">
               <form  action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title">Add Overtime</h3>
-                </div>
+               
+                  <h3>Add Overtime</h3>
+               
                 <div class="body">
                   <div class="row ">
                     <div class="col-sm-6">
@@ -42,7 +41,7 @@
 									</div>
                       <div class="col-sm-12">
                            <div class="form-group">
-                             <button type="submit" class="btn btn-primary form-control">Save</button>
+                             <button type="submit" class="btn btn-primary  px-5 py-2 my-2">Save</button>
                             </div>
                         </div>
                   </div> 
