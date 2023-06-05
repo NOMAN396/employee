@@ -10,7 +10,6 @@
         <tr>
             <th>ID</th>
             <th>Department</th>
-           
             <th>Action</th>
         </tr>
         <?php

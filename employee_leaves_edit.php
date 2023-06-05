@@ -13,8 +13,8 @@
 
            
               <form enctype="multipart/form-data" action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title"> Edit Employee Leaves</h3>
+                <div class="content">
+                  <h3 class="title"> Edit Employee Leaves</h3>
                 </div>
 
                 <?php
@@ -32,7 +32,7 @@
 
                 
                   
-                  <div class="col-sm-6">
+                  <div class="col-md-10">
                       <div class="form-group pt-3">
                         <label>Employee Name <span class="text-danger">*</span></label>
                         <select class="form-control" id="employee_id" name="employee_id">
@@ -46,37 +46,37 @@
                         </select>
                       </div>
                     </div>
-                        <div class="col-sm-6">
+                        <div class="col-md-10">
                             <div class="form-group">
                             <label>From <span class="text-danger">*</span></label>
 											<input onchange="datecount()" class="form-control" value="<?= $d->starting_at ?>" type="date" name="starting_at">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-md-10">
                             <div class="form-group">
                             <label>To <span class="text-danger">*</span></label>
 											<input onchange="datecount()" class="form-control" value="<?= $d->ending_on ?>" type="date" name="ending_on">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-md-10">
                             <div class="form-group">
                             <label>Number of days <span class="text-danger">*</span></label>
 										        <input class="form-control" readonly type="text" value="<?= $d->days ?>" name="days">
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-md-10">
                             <div class="form-group">
                             <label>Leave Reason <span class="text-danger">*</span></label>
 										<textarea rows="5" name="reason" class="form-control" value="<?= $d->reason ?>"></textarea>
                             </div>
                         </div>
         
-                        <div class="col-sm-6">
+                        <div class="col-md-10">
                             <div class="form-group py-2">
-                                <button type="submit" class="btn btn-primary form-control">Save</button>
+                                <button type="submit" class="btn btn-primary form-control my-2">Save</button>
                             </div>
                         </div>
                   </div>

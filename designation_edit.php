@@ -13,10 +13,10 @@
         <div class="row">
           <div class="col-md-12">
 
-            <div class="card card-danger">
+            <div class="content">
               <form  action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title">Add Department</h3>
+                <div class="head">
+                  <h3 class="title">Add Department</h3>
                 </div>
 
 
@@ -32,7 +32,7 @@
                   }
                 ?>
 
-                <div class="card-body">
+                <div class="body">
                   <div class="row ">
                         <div class="col-sm-6">
                             <div class="form-group">

@@ -1,24 +1,20 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Holidays</h1>
+    <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">EMPLOYEE_OVERTIME</li>
+        <li class="breadcrumb-item active">Employee Overtime</li>
     </ol>
-
-
-
-
 
  <section class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
 
-            <div class="card card-danger">
+            <div class="content">
               <form  action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title">EMPLOYEE_INPUT</h3>
+                <div class="head">
+                  <h3 class="title">Edit Overtime</h3>
                 </div>
 
 
@@ -34,9 +30,7 @@
                   }
                 ?>
 
-
-
-                <div class="card-body">
+                <div class="body">
                   <div class="row ">
                     <div class="col-sm-6">
                     <form method="POST">
