@@ -18,14 +18,18 @@
             <th>Action</th>
         </tr>
         <?php
-                  $data=$mysqli->common_select('tbl_termination');
+                  $data=$mysqli->common_select_query("SELECT tbl_termination.*, tbl_department.department_name
+                  FROM `tbl_termination`
+                                   
+                                    join tbl_department on tbl_department.id=tbl_termination.department
+                                    WHERE tbl_termination.deleted_at is null");
                if(!$data['error']){
                     foreach($data['data'] as $d){
                 ?>
         <tr>
             <td><?= $d->id ?></td>
             <td><?= $d->terminated_employee ?></td>
-            <td><?= $d->department ?></td>
+            <td><?= $d->department_name ?></td>
             <td><?= $d->termination_type?></td>
             <td><?= $d->termination_date?></td>
             <td><?= $d->reason ?></td>

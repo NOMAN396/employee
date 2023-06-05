@@ -17,14 +17,27 @@
             <th>Action</th>
         </tr>
         <?php
-                  $data=$mysqli->common_select('tbl_promotion');
+                 // $data=$mysqli->common_select('tbl_promotion');
+               //if(!$data['error']){
+                 //   foreach($data['data'] as $d){
+
+                    
+
+
+                    $data=$mysqli->common_select_query("SELECT tbl_promotion.*, tbl_department.department_name
+                  FROM `tbl_promotion`
+                                   
+                                    join tbl_department on tbl_department.id=tbl_promotion.department_id
+                                    WHERE tbl_promotion.deleted_at is null");
                if(!$data['error']){
                     foreach($data['data'] as $d){
+
+
                 ?>
         <tr>
             <td><?= $d->id ?></td>
             <td><?= $d->promoted_employee ?></td>
-            <td><?= $d->department ?></td>
+            <td><?= $d->department_name ?></td>
             <td><?= $d->promoted_designation_from ?></td>
             <td><?= $d->promoted_designation_to ?></td>
             <td><?= $d->promotion_date ?></td>
