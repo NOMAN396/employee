@@ -1,45 +1,32 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Page Name</h1>
+    <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Page Name</li>
+        <li class="breadcrumb-item active">Designation</li>
     </ol>
     
     <section class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-
             <div class="content">
               <form  action="" method="post">
                 <div class="head">
-                  <h3 class="title">Add Department</h3>
+                  <h3 class="title">Add Designation</h3>
                 </div>
                 <div class="body">
-                  <div class="row ">
                         <div class="col-sm-6">
                             <div class="form-group">
                             <label>Designation Name</label>
                             <input type="text" name="designation" class="form-control">
+                                <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
                             </div>
                         </div>
-                       
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary form-control">Save</button>
-                            </div>
-                        </div>
-                     
-                        
                   </div>
 
-                  <?php
+  <?php
   if($_POST){
-    if($_POST['password']){
-      $_POST['password']=sha1(md5($_POST['password']));
-    }
-      
     $rs=$mysqli->common_create('tbl_designations',$_POST);
     if(!$rs['error']){
       echo "<script>window.location='designation_list.php'</script>";

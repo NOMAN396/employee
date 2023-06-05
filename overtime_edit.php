@@ -30,8 +30,8 @@
                   }
                 ?>
 
-                <div class="body">
-                  <div class="row ">
+                <!-- <div class="body">
+                  <div class="row "> -->
                     <div class="col-sm-6">
                     <form method="POST">
 									<div class="form-group">
@@ -39,7 +39,7 @@
 										<input name="employee" class="form-control" value="<?= $d->employee ?>" required type="text">
 									</div>
 									<div class="form-group">
-										<label>Overtime_Date<span class="text-danger">*</span></label>
+										<label>Overtime Date<span class="text-danger">*</span></label>
 										<input class="form-control" name="overtime_date" value="<?= $d->overtime_date ?>" required type="date">
 									</div>
 									<div class="form-group">
@@ -54,12 +54,12 @@
 										<label>Description<span class="text-danger">*</span></label>
 										<input class="form-control" name="description" value="<?= $d->description ?>" required type="text">
 									</div>
-                      <div class="col-sm-12">
-                           <div class="form-group">
-                             <button type="submit" class="btn btn-primary form-control">Save</button>
-                            </div>
-                        </div>
-                  </div> 
+                      
+                    <div>
+                      <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
+                    </div>
+              
+                  <!-- </div>  -->
 
 
 
@@ -77,7 +77,7 @@
 
             ?>
 
-                  </div>
+                  <!-- </div> -->
                 </form>
               </div>
             </div>
