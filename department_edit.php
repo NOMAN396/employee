@@ -3,7 +3,7 @@
 <div class="container-fluid px-4">
     <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Emoloyee Information</li>
+        <li class="breadcrumb-item active">Department List</li>
     </ol>
     
     <section class="content">
@@ -11,10 +11,10 @@
         <div class="row">
           <div class="col-md-12">
 
-            <div class="content">
+            <div class="content my-3">
               <form enctype="multipart/form-data" action="" method="post">
-                <div class="head">
-                  <h3 class="title">Emoloyee Information</h3>
+                <div class="head my-2">
+                  <h3 class="title">Edit Department</h3>
                 </div>
 
                 <?php
@@ -36,12 +36,7 @@
                             <div class="form-group">
                             <label>Department:</label>
                             <input type="text" value="<?= $d->department_name ?>" name="department_name" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary form-control">Save</button>
+                                <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
                             </div>
                         </div>
                   </div>
@@ -49,10 +44,6 @@
 
 <?php
   if($_POST){
-    if($_POST['password']){
-      $_POST['password']=sha1(md5($_POST['password']));
-    }
-      
     $rs=$mysqli->common_update('tbl_department',$_POST,$where);
     if(!$rs['error']){
       echo "<script>window.location='department_list.php'</script>";
