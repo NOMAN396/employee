@@ -29,6 +29,8 @@ if ($_GET['id']) {
 ?>
 
 <div class="container-fluid px-4">
+    <div class="row">
+        <div class="col-md-6">
     <h1 class="mt-4">Attendance</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Attendance Edit - ID: <?= $att_record->id ?></li>
@@ -48,10 +50,11 @@ if ($_GET['id']) {
             </select>
         </div>
         
-        <button type="submit" class="btn btn-primary">Update</button>
-    </form>
-</div>
-
+                 <button type="submit" class="btn btn-primary px-5 my-2">Update</button>
+             </form>
+        </div>
+    </div>
+    </div>
 
 <?php
     } else {

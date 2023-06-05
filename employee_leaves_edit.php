@@ -30,8 +30,6 @@
                 ?>
 
 
-                
-                  
                   <div class="col-md-10">
                       <div class="form-group pt-3">
                         <label>Employee Name <span class="text-danger">*</span></label>
@@ -70,14 +68,11 @@
                         <div class="col-md-10">
                             <div class="form-group">
                             <label>Leave Reason <span class="text-danger">*</span></label>
-										<textarea rows="5" name="reason" class="form-control" value="<?= $d->reason ?>"></textarea>
+										<textarea rows="5" name="reason" class="form-control" value="<?= $d->reason ?>"></textarea>     
                             </div>
                         </div>
-        
-                        <div class="col-md-10">
-                            <div class="form-group py-2">
-                                <button type="submit" class="btn btn-primary form-control my-2">Save</button>
-                            </div>
+                        <div>
+                        <button type="submit" class="btn btn-primary mx-3 px-5 my-2">Save</button>
                         </div>
                   </div>
                   
