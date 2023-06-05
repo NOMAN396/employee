@@ -31,10 +31,10 @@
             <td><?= $d->salary ?></td>
             <td><?= $d->payslip ?></td>
             <td>
-                <a title="Update" href="user_edit.php?id=<?= $d->id ?>">
+                <a title="Update" href="employee_salary_edit.php?id=<?= $d->id ?>">
                             <i class="fa fa-edit"></i>
                 </a>
-                <a title="Delete" class="text-danger" href="user_delete.php?id=<?= $d->id ?>">
+                <a title="Delete" class="text-danger" href="employee_salary_delete.php?id=<?= $d->id ?>">
                             <i class="fa fa-trash"></i>
                 </a>
             </td>

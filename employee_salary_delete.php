@@ -5,9 +5,9 @@
 <?php
   $where['id']=$_GET['id'];
   $data['deleted_at']=date('Y-m-d H:i:s');
-  $rs=$mysqli->common_update('tbl_leaves',$data,$where);
+  $rs=$mysqli->common_update('tbl_salary',$data,$where);
     if(!$rs['error']){
-      echo "<script>window.location='employee_salary_list.php'</script>";
+      echo "<script>window.location='employee_leave.php'</script>";
     }else{
         echo $rs['error'];
     }

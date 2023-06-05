@@ -97,6 +97,19 @@
                 <div class="submit-section">
                     <button class="btn btn-primary submit-btn">Submit</button>
                 </div>
+
+
+ <?php
+  if($_POST){
+    $rs=$mysqli->common_update('tbl_salary',$_POST,$where);
+    if(!$rs['error']){
+      echo "<script>window.location='employee_salary_list.php'</script>";
+    }else{
+        echo $rs['error'];
+    }
+  }
+ ?>
+
             </form>
         </div>
     </div>
