@@ -3,7 +3,7 @@
 <div class="container-fluid px-4">
     <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Emoloyee Information</li>
+        <li class="breadcrumb-item active">Employee Information</li>
     </ol>
     
     <section class="content">
@@ -111,16 +111,11 @@
                             <div class="form-group">
                                 <label>Picture:</label>
                                 <input type="file" name="image" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary form-control">Save</button>
+                                <button type="submit" class="btn btn-primary ">Save</button>
                             </div>
                         </div>
                   </div>
-                  <!-- Date dd/mm/yyyy -->
+                 
 
 <?php
   if($_POST){

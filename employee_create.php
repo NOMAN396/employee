@@ -16,7 +16,7 @@
             <div class="card card-danger">
               <form enctype="multipart/form-data" action="" method="post">
                 <div class="card-header">
-                  <h3 class="card-title">Emoloyee Information</h3>
+                  <h3 class="card-title">Employee Information</h3>
                 </div>
                 <div class="card-body">
                   <div class="row ">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Employee_ID:</label>
+                                <label>Employee ID:</label>
                                 <input type="text" name="employee_id" class="form-control">
                             </div>
                         </div>
@@ -99,14 +99,11 @@
                                 <input type="file" name="image" class="form-control">
                             </div>
                         </div>
-
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary form-control">Save</button>
-                            </div>
+                        <div class="my-1">
+                        <button type="submit" class="btn btn-primary text-center my-1 px-5 py-1">Save</button>
                         </div>
                   </div>
-                  <!-- Date dd/mm/yyyy -->
+              
 
 <?php
   if($_POST){
