@@ -4,20 +4,8 @@ require_once('include/sidebar.php');
 
 
 if ($_GET['id']) {
-   
     $id = $_GET['id'];
     
-   
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-   
-        $newStatus = $_POST['status'];
-        
-       
-        header("Location:attendance_show.php");
-      
-    }
-    
-   
     $data = $mysqli->common_select_query("SELECT tbl_attendance.*,tbl_employees.first_name,tbl_employees.last_name, tbl_employees.employee_id
         FROM `tbl_attendance` 
         JOIN tbl_employees ON tbl_employees.id = tbl_attendance.employee_id
@@ -33,18 +21,19 @@ if ($_GET['id']) {
         <div class="col-md-6">
     <h1 class="mt-4">Attendance</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Attendance Edit - ID: <?= $att_record->id ?></li>
+        <li class="breadcrumb-item active">Attendance Edit - </li>
+        <li class="breadcrumb-item active">Date: <?= $att_record->att_date ?></li>
     </ol>
     
     <form method="POST" action="">
         <div class="form-group">
             <label for="employee">Employee:</label>
-            <input type="text" class="form-control" id="employee" name="employee" value="<?= $att_record->employee_id ?> - <?= $att_record->first_name ?> <?= $att_record->last_name ?>" readonly>
+            <input type="text" class="form-control" value="<?= $att_record->employee_id ?> - <?= $att_record->first_name ?> <?= $att_record->last_name ?>" readonly>
         </div>
         
         <div class="form-group">
-            <label for="status">Status:</label>
-            <select class="form-control" id="status" name="status">
+            <label for="att_status">Status:</label>
+            <select class="form-control" id="att_status" name="att_status">
                 <option value="1" <?= $att_record->att_status == 1 ? 'selected' : '' ?>>Present</option>
                 <option value="0" <?= $att_record->att_status == 0 ? 'selected' : '' ?>>Absent</option>
             </select>
@@ -65,6 +54,14 @@ if ($_GET['id']) {
   
     echo "<div class='container-fluid px-4'>Invalid request. Attendance ID is missing.</div>";
 }
-
+if($_POST){
+    $where['id']=$id;
+    $rs=$mysqli->common_update('tbl_attendance',$_POST,$where);
+    if(!$rs['error']){
+      echo "<script>window.location='attendance_list.php'</script>";
+    }else{
+        echo $rs['error'];
+    }
+  }
 require_once('include/footer.php');
 ?>
