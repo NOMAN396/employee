@@ -7,18 +7,16 @@
     </ol>
     
     <section class="content">
-      <div class="container-fluid">
+      
         <div class="row">
           <div class="col-md-12">
 
-            <div class="card card-danger">
+         
               <form enctype="multipart/form-data" action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title">Add New</h3>
-                </div>
-                <div class="card-body">
-                  <div class="row ">
-                  <div class="col-sm-8 offset-2">
+                
+                <div class="body">
+                 
+                  <div class="col-sm-8 ">
                             <div class="form-group">
                             <label>Resigning Employee <span class="text-danger">*</span></label>
                             
@@ -33,7 +31,7 @@
                             </select>
                             </div>
                         </div>
-                  <div class="col-sm-8 offset-2">
+                  <div class="col-sm-8 ">
                             <div class="form-group">
                             <label>Department<span class="text-danger">*</span></label>
                             <select class="form-control" id="department_id" name="department">
@@ -48,7 +46,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8 ">
                             <div class="form-group">
                             <label>Notice Date<span class="text-danger">*</span></label>
                             <input name="notice_date" class="form-control" type="date">	
@@ -56,23 +54,19 @@
                         </div>
 
                        
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8 ">
                             <div class="form-group">
                             <label>Resignation Date<span class="text-danger">*</span></label>
                             <input name="resignation_date" class="form-control" type="date">	
                             </div>
                         </div>
 
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
                             <label>Reason<span class="text-danger">*</span></label>
 							<textarea name="reason" class="form-control" type="text"></textarea>
-                            </div>
-                        </div>
-                       
-                        <div class="col-sm-8 offset-2">
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary form-control">Save</button>
+                         
+                                <button type="submit" class="btn btn-primary  px-5 py-2 my-2">Save</button>
                             </div>
                         </div>
                   </div>

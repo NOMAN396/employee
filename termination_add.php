@@ -13,7 +13,7 @@
                 
                 <div class="body">
                   
-                  <div class="col-sm-8">
+                  <div class="col-sm-10">
                             <div class="form-group">
                             <label>Terminated Employee <span class="text-danger">*</span></label>
                             <select class="form-control" id="department_id" name="terminated_employee">
@@ -27,7 +27,7 @@
                               </select>
                             </div>
                         </div>
-                  <div class="col-sm-8">
+                  <div class="col-sm-10">
                             <div class="form-group">
                             <label>Department <span class="text-danger">*</span></label>
                             <select class="form-control" id="department_id" name="department">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
 
-        <div class="col-sm-8">
+        <div class="col-sm-10">
             <div class="form-group">
             <label>Termination Type <span class="text-danger">*</span></label>
             <select name="termination_type" class="form-control " type="text">
@@ -53,21 +53,21 @@
                   </div>
                      </div>
 
-                        <div class="col-sm-8">
+                        <div class="col-sm-10">
                             <div class="form-group">
                             <label>Termination Date<span class="text-danger">*</span></label>
                             <input name="termination_date" class="form-control" type="date">	
                             </div>
                         </div>
 
-                        <div class="col-sm-8">
+                        <div class="col-sm-10">
                             <div class="form-group">
                             <label>Reason<span class="text-danger">*</span></label>
 							<textarea name="reason" class="form-control" type="text"></textarea>
                             </div>
                         </div>
                         
-                        <div class="col-sm-8">
+                        <div class="col-sm-10">
                             <div class="form-group">
                             <label>Notice Date<span class="text-danger">*</span></label>
                             <input name="notice_date" class="form-control" type="date">	

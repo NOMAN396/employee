@@ -7,18 +7,18 @@
     </ol>
     
     <section class="content">
-      <div class="container-fluid">
+      
         <div class="row">
           <div class="col-md-12">
 
            
               <form enctype="multipart/form-data" action="" method="post">
                 
-                  <h5 class="title">Add New Promotion</h5>
+               
            
                 <div class="body">
                  
-                  <div class="col-sm-8 offset-2">
+                  <div class="col-sm-8">
                             <div class="form-group">
                             <label>Promotion For <span class="text-danger">*</span></label>
                             <select class="form-control" id="department_id" name="promoted_employee">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
                             <label>Deprtment</label>
                             <select class="form-control" id="department_id" name="department">
@@ -47,14 +47,14 @@
                               </select>
                             </div>
                         </div>
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
                             <label>Promotion From <span class="text-danger">*</span></label>
 											<input name="promoted_designation_from" class="form-control " type="text">
                             </div>
                         </div>
 
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
                             <label>Promotion To<span class="text-danger">*</span></label>
 										<input name="promoted_designation_to" class="form-control" type="text">
@@ -62,7 +62,7 @@
                         </div>
 
               
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
                             <label>Promotion Date<span class="text-danger">*</span></label>
                             <input name="promotion_date" class="form-control" type="date">	
