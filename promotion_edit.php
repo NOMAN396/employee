@@ -35,14 +35,37 @@
                     <div class="col-sm-8 offset-2">
                             <div class="form-group">
                             <label>Promotion For <span class="text-danger">*</span></label>
-										        <input name="promoted_employee" value="<?= $d->promoted_employee ?>"  class="form-control" type="text">
+										        
+                            <select class="form-control" id="department_id" name="promoted_employee">
+                                  <?php
+                                      $data=$mysqli->common_select('tbl_employees');
+                                      if(!$data['error']){
+                                          foreach($data['data'] as $dt){
+                                  ?>
+                                      <option value="<?= $dt->id ?>"><?= $dt->first_name.$dt->last_name ?></option>
+                                  <?php } } ?>
+                              </select>
                             </div>
                           </div>
+
+                          <div class="col-sm-8 offset-2">
+                            <div class="form-group">
+                            <label>Deprtment</label>
+                            <select class="form-control" id="department_id" name="department">
+                                  <?php
+                                      $data=$mysqli->common_select('tbl_department');
+                                      if(!$data['error']){
+                                          foreach($data['data'] as $dt){
+                                  ?>
+                                      <option value="<?= $dt->id ?>"><?= $dt->department_name ?></option>
+                                  <?php } } ?>
+                              </select>
+                            </div>
 
                       <div class="col-sm-8 offset-2">
                             <div class="form-group">
                             <label>Promotion From <span class="text-danger">*</span></label>
-											      <input name="promoted_designation_from" value="<?= $d->promoted_designation_from ?>" class="form-control " type="text">
+											      <input name="promoted_designation_from" value="<?= $d->promoted_designation_from ?>" class="form-control" type="text">
                               </div>
                              </div>
 

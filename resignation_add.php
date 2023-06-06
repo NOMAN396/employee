@@ -21,7 +21,16 @@
                   <div class="col-sm-8 offset-2">
                             <div class="form-group">
                             <label>Resigning Employee <span class="text-danger">*</span></label>
-                            <input name="resigning_employee" class="form-control" type="text">
+                            
+                            <select name="resigning_employee" id="" class="form-control">
+                                <?php
+                                $data=$mysqli->common_select('tbl_employees');
+                                if(!$data['error']){
+                                    foreach($data['data'] as $dt){
+                                        ?>
+                                        <option value="<?= $dt->id ?>"><?= $dt->first_name.$dt->last_name ?></option>
+                                   <?php } } ?>
+                            </select>
                             </div>
                         </div>
                   <div class="col-sm-8 offset-2">

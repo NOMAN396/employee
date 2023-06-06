@@ -24,9 +24,9 @@
                     
 
 
-                    $data=$mysqli->common_select_query("SELECT tbl_promotion.*, tbl_department.department_name,
+                    $data=$mysqli->common_select_query("SELECT tbl_promotion.*, tbl_department.department_name,tbl_employees.first_name,tbl_employees.last_name
                   FROM `tbl_promotion`
-                                   
+                                   join tbl_employees on tbl_employees.id=tbl_promotion.promoted_employee
                                     join tbl_department on tbl_department.id=tbl_promotion.department
                                     WHERE tbl_promotion.deleted_at is null");
                if(!$data['error']){
@@ -36,7 +36,7 @@
                 ?>
         <tr>
             <td><?= $d->id ?></td>
-            <td><?= $d->promoted_employee ?></td>
+            <td><?= $d->first_name ?> <?= $d->last_name ?></td>
             <td><?= $d->department_name ?></td>
             <td><?= $d->promoted_designation_from ?></td>
             <td><?= $d->promoted_designation_to ?></td>

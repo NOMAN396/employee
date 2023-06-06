@@ -18,8 +18,9 @@
         </tr>
         <?php
                   $data=$mysqli->common_select_query("SELECT tbl_resignation.*,
-                  tbl_department.department_name
+                  tbl_department.department_name,tbl_employees.first_name,tbl_employees.last_name
                   FROM `tbl_resignation`
+                  join tbl_employees on tbl_employees.id=tbl_resignation.resigning_employee
                   join tbl_department on tbl_department.id=tbl_resignation.department
                   WHERE tbl_resignation.deleted_at is null");
                if(!$data['error']){
@@ -27,7 +28,7 @@
                 ?>
         <tr>
             <td><?= $d->id ?></td>
-            <td><?= $d->resigning_employee ?></td>
+            <td><?= $d->first_name ?> <?= $d->last_name ?></td>
             <td><?= $d->department_name ?></td>
             <td><?= $d->reason ?></td>
             <td><?= $d->notice_date ?></td>
