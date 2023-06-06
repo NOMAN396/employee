@@ -24,7 +24,7 @@
                     
 
 
-                    $data=$mysqli->common_select_query("SELECT tbl_promotion.*, tbl_department.department_name
+                    $data=$mysqli->common_select_query("SELECT tbl_promotion.*, tbl_department.department_name,
                   FROM `tbl_promotion`
                                    
                                     join tbl_department on tbl_department.id=tbl_promotion.department
