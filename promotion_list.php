@@ -27,7 +27,7 @@
                     $data=$mysqli->common_select_query("SELECT tbl_promotion.*, tbl_department.department_name
                   FROM `tbl_promotion`
                                    
-                                    join tbl_department on tbl_department.id=tbl_promotion.department_id
+                                    join tbl_department on tbl_department.id=tbl_promotion.department
                                     WHERE tbl_promotion.deleted_at is null");
                if(!$data['error']){
                     foreach($data['data'] as $d){
