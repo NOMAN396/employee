@@ -1,22 +1,22 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4 text-center">Attendance</h1>
+    <h1 class="mt-4 text-start">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active text-center mx-auto">Emoloyee Attendance</li>
+        <li class="breadcrumb-item active text-start">Employee Attendance</li>
     </ol>
     <section class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
 
-            <div class="card card-danger">
+         
               <form enctype="multipart/form-data" action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title">Emoloyee Attendance</h3>
-                </div>
-                <div class="card-body">
-                  <div class="row ">
+               
+              
+              
+                <div class="body">
+                  
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Attendance Date:</label>
@@ -49,13 +49,12 @@
                         <?php } } ?>
                       </table>
                     </div>
-                    <div class="col-sm-12">
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-primary form-control">Save</button>
-                      </div>
+                    
+                     
+                        <button type="submit" class="btn btn-primary px-5 py-2 my-2">Save</button>
+                    
                     </div>
-                  </div>
-                  <!-- Date dd/mm/yyyy -->
+                 
 
 <?php
   if($_POST){
