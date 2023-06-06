@@ -1,26 +1,23 @@
 <?php require_once('include/header.php') ?>
 <?php require_once('include/sidebar.php') ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4 text-center">EMPLOYEE</h1>
+    <h1 class="mt-4 text-start">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active text-center mx-auto">Emoloyee Leave</li>
+        <li class="breadcrumb-item active text-start">Emoloyee Leave</li>
     </ol>
     
 
 
     <section class="content">
-      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
 
-            <div class="card card-danger">
+            
               <form enctype="multipart/form-data" action="" method="post">
-                <div class="card-header">
-                  <h3 class="card-title">Add New Leave</h3>
-                </div>
-                <div class="card-body">
-                  <div class="row ">
-                    <div class="col-sm-8 offset-2">
+                
+                <div class="body">
+                 
+                    <div class="col-sm-8">
                       <div class="form-group">
                         <label>Employee Name <span class="text-danger">*</span></label>
                         <select class="form-control" id="employee_id" name="employee_id">
@@ -34,33 +31,33 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-sm-8 offset-2">
+                    <div class="col-sm-8 ">
                       <div class="form-group">
                         <label>From <span class="text-danger">*</span></label>
 										    <input onchange="datecount()" name="starting_at" id="starting_at" class="form-control" type="date">
                       </div>
                     </div>
-                    <div class="col-sm-8 offset-2">
+                    <div class="col-sm-8 ">
                       <div class="form-group">
                         <label>To <span class="text-danger">*</span></label>
 											  <input onchange="datecount()" name="ending_on" id="ending_on" class="form-control " type="date">
                       </div>
                     </div>
-                    <div class="col-sm-8 offset-2">
+                    <div class="col-sm-8 ">
                       <div class="form-group">
                         <label>Number of days <span class="text-danger">*</span></label>
 										    <input name="days" readonly id="days" class="form-control" type="number">
                       </div>
                     </div>
-                    <div class="col-sm-8 offset-2">
+                    <div class="col-sm-8 ">
                       <div class="form-group">
                         <label>Leave Reason <span class="text-danger">*</span></label>
 										    <textarea name="reason" rows="4" class="form-control"></textarea>
                       </div>
                     </div>
-                        <div class="col-sm-8 offset-2">
+                        <div class="col-sm-8">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary form-control">Save</button>
+                                <button type="submit" class="btn btn-primary px-5 py-2 my-2">Save</button>
                             </div>
                         </div>
                   </div>
