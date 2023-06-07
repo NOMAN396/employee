@@ -33,7 +33,7 @@
                     </select>
 									</div>
 									<div class="form-group">
-										<label>Overtime_Date<span class="text-danger">*</span></label>
+										<label>Overtime Date<span class="text-danger">*</span></label>
 										<input class="form-control" name="overtime_date" required type="date">
 									</div>
 									<div class="form-group">
