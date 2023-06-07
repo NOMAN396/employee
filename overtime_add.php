@@ -21,7 +21,16 @@
                     <form method="POST">
 									<div class="form-group">
 										<label>Employee Name <span class="text-danger">*</span></label>
-										<input name="employee" class="form-control" required type="text">
+										
+                    <select name="employee" id="" class="form-control">
+                    <?php
+                                      $data=$mysqli->common_select('tbl_employees');
+                                      if(!$data['error']){
+                                          foreach($data['data'] as $dt){
+                                  ?>
+                                      <option value="<?= $dt->id ?>"><?= $dt->first_name.$dt->last_name ?></option>
+                                  <?php } } ?>
+                    </select>
 									</div>
 									<div class="form-group">
 										<label>Overtime_Date<span class="text-danger">*</span></label>

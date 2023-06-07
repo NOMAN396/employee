@@ -17,13 +17,16 @@
             <th>Action</th>
         </tr>
         <?php
-                  $data=$mysqli->common_select('tbl_overtime');
+                  $data=$mysqli->common_select_query('SELECT tbl_overtime.*,tbl_employees.first_name,tbl_employees.last_name
+                  From `tbl_overtime`
+                  join tbl_employees on tbl_employees.id=tbl_overtime.employee
+                  where tbl_overtime.deleted_at is null');
                if(!$data['error']){
                     foreach($data['data'] as $d){
                 ?>
         <tr>
             <td><?= $d->id ?></td>
-            <td><?= $d->employee ?></td>
+            <td><?= $d->first_name ?> <?= $d->last_name ?></td>
             <td><?= $d->overtime_date ?></td>
             <td><?= $d->hours ?></td>
             <td><?= $d->type ?></td>
