@@ -17,6 +17,7 @@
             if(is_array($condition)){
                 $sql.=" and ";
                 foreach($condition as $k=>$v){
+                    $v = $this->connection->real_escape_string($v);
                     $sql.="$k='$v' and ";
                 }
                 $sql=rtrim($sql,'and ');
@@ -33,7 +34,7 @@
                 }
                 
             }else{
-                $error=$this->connection->error();
+                $error=$this->connection->error;
             }
             $return = array('data'=>$result,'error'=>$error);
             return $return;
@@ -46,6 +47,7 @@
             if(is_array($condition)){
                 $sql.=" and ";
                 foreach($condition as $k=>$v){
+                    $v = $this->connection->real_escape_string($v);
                     $sql.="$k='$v' and ";
                 }
                 $sql=rtrim($sql,'and ');
@@ -62,7 +64,7 @@
                 }
                 
             }else{
-                $error=$this->connection->error();
+                $error=$this->connection->error;
             }
             $return = array('data'=>$result,'error'=>$error);
             return $return;
@@ -74,15 +76,16 @@
             $sql="insert into $table set ";
             if(is_array($data)){
                 foreach($data as $k=>$v){
+                    $v = $this->connection->real_escape_string($v);
                     $sql.="$k='$v',";
                 }
-                $sql=rtrim($sql,',');
+                $sql=rtrim($sql,",");
             }
             $rs=$this->connection->query($sql);
             if($rs){
                 $result=$this->connection->insert_id;
             }else{
-                $error=$this->connection->error();
+                $error=$this->connection->error;
             }
             $return = array('data'=>$result,'error'=>$error);
             return $return;
@@ -94,14 +97,16 @@
             $sql="update $table set ";
             if(is_array($data)){
                 foreach($data as $k=>$v){
+                    $v = $this->connection->real_escape_string($v);
                     $sql.="$k='$v',";
                 }
-                $sql=rtrim($sql,',');
+                $sql=rtrim($sql,",");
             }
 
             if(is_array($condition)){
                 $sql.=" where ";
                 foreach($condition as $k=>$v){
+                    $v = $this->connection->real_escape_string($v);
                     $sql.="$k='$v' and ";
                 }
                 $sql=rtrim($sql,'and ');
@@ -111,7 +116,7 @@
             if($rs){
                 $result=$this->connection->affected_rows;
             }else{
-                $error=$this->connection->error();
+                $error=$this->connection->error;
             }
             $return = array('data'=>$result,'error'=>$error);
             return $return;
@@ -125,6 +130,7 @@
             if(is_array($condition)){
                 $sql.=" where ";
                 foreach($condition as $k=>$v){
+                    $v = $this->connection->real_escape_string($v);
                     $sql.="$k='$v' and ";
                 }
                 $sql=rtrim($sql,'and ');
@@ -134,7 +140,7 @@
             if($rs){
                 $result=$this->connection->affected_rows;
             }else{
-                $error=$this->connection->error();
+                $error=$this->connection->error;
             }
             $return = array('data'=>$result,'error'=>$error);
             return $return;
@@ -152,7 +158,7 @@
                 }
                 
             }else{
-                $error=$this->connection->error();
+                $error=$this->connection->error;
             }
             $return = array('data'=>$result,'error'=>$error);
             return $return;
