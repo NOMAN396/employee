@@ -3,7 +3,7 @@
 <div class="container-fluid px-4">
     <h1 class="mt-4">EMPLOYEE</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Department</li>
+        <li class="breadcrumb-item active fs-5">Department</li>
     </ol>
     
 
@@ -14,15 +14,11 @@
           <div class="col-md-12">
             <div class="content">
               <form  action="" method="post">
-                <div class="head">
-                  <h3 class="card-title">Add Department</h3>
-                </div>
-                <div class="body">
-                  <div class="row ">
+                  <h4 class="my-3">Add Department</h4>
                         <div class="col-sm-6">
-                            <div class="form-group">
+                            <div class="form-group my-1">
                             <label>Department Name</label>
-                            <input type="text" name="department_name" class="form-control">
+                            <input type="text" name="department_name" class="form-control my-1">
                                 <button type="submit" class="btn btn-primary my-2 p-2 px-5">Save</button>
                             </div>
                         </div>   

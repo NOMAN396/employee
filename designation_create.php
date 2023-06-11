@@ -12,11 +12,8 @@
           <div class="col-md-12">
             <div class="content">
               <form  action="" method="post">
-                <div class="head">
                   <h3 class="title">Add Designation</h3>
-                </div>
-                <div class="body">
-                        <div class="col-sm-6">
+                        <div class="col-md-6">
                             <div class="form-group">
                             <label>Designation Name</label>
                             <input type="text" name="designation" class="form-control">

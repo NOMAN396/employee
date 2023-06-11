@@ -24,7 +24,7 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Employee_ID</th>
+            <th>Employee ID</th>
             <th>Department</th>
             <th>Designation</th>
             <th>Joining Date</th>
