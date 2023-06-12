@@ -38,7 +38,15 @@
                             <div class="form-group">
                             <label>Designation Name</label>
                             <input type="text" name="designation" value="<?= $d->designation ?>"class="form-control">
-                                <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
+                                
+                            </div>
+                        </div>
+                     
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label>basic</label>
+                            <input type="text" name="designation" value="<?= $d->basic ?>"class="form-control">
+                            <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
                             </div>
                         </div>
                      

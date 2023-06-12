@@ -17,6 +17,12 @@
                             <div class="form-group">
                             <label>Designation Name</label>
                             <input type="text" name="designation" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <label>Basic</label>
+                            <input type="text" name="basic" class="form-control">
                                 <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
                             </div>
                         </div>

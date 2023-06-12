@@ -8,6 +8,7 @@
     <a href="employee_salary_add.php"class="btn btn-primary align-right">ADD NEW</a>
     <table class="table">
         <tr>
+            <th>#</th>
             <th>Employee</th>
             <th>Employee_ID</th>
             <th>Email</th>
@@ -18,12 +19,16 @@
             <th>Action</th>
         </tr>
         <?php
-                  $data=$mysqli->common_select('employee_salary');
+                  $data=$mysqli->common_select_query("SELECT employee_salary.*,tbl_employees.first_name,tbl_employees.last_name,tbl_employees.employee_id,tbl_employees.email,tbl_employees.joining_date
+                  FROM `employee_salary`
+                  join tbl_employees on tbl_employees.id=employee_salary.id Where employee_salary.deleted_at is null
+                  ");
                if(!$data['error']){
                     foreach($data['data'] as $d){
                 ?>
         <tr>
-            <td><?= $d->name ?></td>
+            <td><?= $d->id ?></td>
+            <td><?= $d->first_name ?> <?= $d->last_name ?></td>
             <td><?= $d->employee_id ?></td>
             <td><?= $d->email ?></td>
             <td><?= $d->joining_date ?></td>
