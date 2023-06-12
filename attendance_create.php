@@ -69,7 +69,7 @@
       
     
     if(!$rs['error']){
-      echo "<script>window.location='attendence_list.php'</script>";
+      echo "<script>window.location='attendance_list.php'</script>";
     }else{
         echo $rs['error'];
     }

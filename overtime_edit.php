@@ -54,7 +54,7 @@
 									</div>
 									<div class="form-group col-sm-7">
 										<label>Hours<span class="text-danger">*</span></label>
-										<input class="form-control" name="hours" value="<?= $d->hours ?>" required type="time">
+										<input class="form-control" name="hours" value="<?= $d->hours ?>" required type="number">
 									</div>
 									<div class="form-group col-sm-7">
 										<label>Description<span class="text-danger">*</span></label>
