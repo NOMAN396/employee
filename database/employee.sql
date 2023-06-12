@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2023 at 09:00 AM
+-- Generation Time: Jun 13, 2023 at 03:00 AM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,6 +54,66 @@ CREATE TABLE `tbl_attendance` (
   `att_date` date NOT NULL,
   `att_status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Absent,1 Present'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_attendance`
+--
+
+INSERT INTO `tbl_attendance` (`id`, `employee_id`, `att_date`, `att_status`) VALUES
+(1, 1, '2023-06-12', 1),
+(2, 2, '2023-06-12', 1),
+(3, 3, '2023-06-12', 1),
+(4, 4, '2023-06-12', 1),
+(5, 5, '2023-06-12', 1),
+(6, 6, '2023-06-12', 1),
+(7, 7, '2023-06-12', 1),
+(8, 8, '2023-06-12', 1),
+(9, 9, '2023-06-12', 1),
+(10, 10, '2023-06-12', 0),
+(11, 11, '2023-06-12', 1),
+(12, 12, '2023-06-12', 1),
+(13, 13, '2023-06-12', 1),
+(14, 14, '2023-06-12', 1),
+(15, 15, '2023-06-12', 1),
+(16, 16, '2023-06-12', 1),
+(17, 17, '2023-06-12', 1),
+(18, 18, '2023-06-12', 1),
+(19, 19, '2023-06-12', 1),
+(20, 20, '2023-06-12', 1),
+(21, 21, '2023-06-12', 1),
+(22, 22, '2023-06-12', 1),
+(23, 23, '2023-06-12', 1),
+(24, 24, '2023-06-12', 1),
+(25, 25, '2023-06-12', 0),
+(26, 26, '2023-06-12', 1),
+(27, 27, '2023-06-12', 0),
+(28, 1, '2023-06-11', 1),
+(29, 2, '2023-06-11', 1),
+(30, 3, '2023-06-11', 1),
+(31, 4, '2023-06-11', 1),
+(32, 5, '2023-06-11', 1),
+(33, 6, '2023-06-11', 1),
+(34, 7, '2023-06-11', 1),
+(35, 8, '2023-06-11', 1),
+(36, 9, '2023-06-11', 1),
+(37, 10, '2023-06-11', 0),
+(38, 11, '2023-06-11', 1),
+(39, 12, '2023-06-11', 1),
+(40, 13, '2023-06-11', 1),
+(41, 14, '2023-06-11', 1),
+(42, 15, '2023-06-11', 1),
+(43, 16, '2023-06-11', 1),
+(44, 17, '2023-06-11', 1),
+(45, 18, '2023-06-11', 1),
+(46, 19, '2023-06-11', 1),
+(47, 20, '2023-06-11', 1),
+(48, 21, '2023-06-11', 1),
+(49, 22, '2023-06-11', 1),
+(50, 23, '2023-06-11', 0),
+(51, 24, '2023-06-11', 1),
+(52, 25, '2023-06-11', 0),
+(53, 26, '2023-06-11', 1),
+(54, 27, '2023-06-11', 0);
 
 -- --------------------------------------------------------
 
@@ -220,15 +280,6 @@ CREATE TABLE `tbl_holidays` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `tbl_holidays`
---
-
-INSERT INTO `tbl_holidays` (`id`, `holiday_name`, `holiday_date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'dfdddhjhj', '2023-06-28', '0000-00-00 00:00:00', '', NULL, '', NULL),
-(2, 'ffgfgfg', '2023-06-30', '0000-00-00 00:00:00', '', NULL, '', '2023-06-01 17:21:07'),
-(3, 'fdfddfhh', '2023-06-11', '0000-00-00 00:00:00', '', NULL, '', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -249,6 +300,14 @@ CREATE TABLE `tbl_leaves` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `tbl_leaves`
+--
+
+INSERT INTO `tbl_leaves` (`id`, `employee_id`, `starting_at`, `ending_on`, `days`, `reason`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, 25, '2023-06-04', '2023-06-07', 4, 'Personal problem.', NULL, NULL, NULL, NULL, NULL),
+(2, 12, '2023-06-03', '2023-06-06', 4, 'Family emergency.', NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -268,6 +327,14 @@ CREATE TABLE `tbl_overtime` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_overtime`
+--
+
+INSERT INTO `tbl_overtime` (`id`, `employee`, `overtime_date`, `hours`, `type`, `description`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, '22', '2023-06-07', 2, 'Normal ex.2', 'Worked on a new design on emergency basis.', NULL, NULL, NULL, NULL, NULL),
+(2, '10', '2023-06-07', 3, 'Normal ex.3', 'Worked on a new project focusing on fast delivery to client.', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -369,9 +436,7 @@ CREATE TABLE `tbl_promotion` (
 --
 
 INSERT INTO `tbl_promotion` (`id`, `promoted_employee`, `department`, `promoted_designation_from`, `promoted_designation_to`, `promotion_date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Ibrahim Khalil', NULL, 'Junior Designer', 'Senior Creative Designer', '2023-06-15', NULL, NULL, NULL, NULL, NULL),
-(2, 'Jasim Uddin', NULL, 'Jr. Web Designer', 'Full Stack Web Developer', '2023-06-16', NULL, NULL, NULL, NULL, NULL),
-(3, 'Noman Hossain', NULL, 'Jr. Wordpress Developer', 'Senior Wp Developer', '2023-06-30', NULL, NULL, NULL, NULL, '2023-06-02 19:32:03');
+(5, '13', '2', '2', '6', '2023-06-08', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -393,6 +458,13 @@ CREATE TABLE `tbl_resignation` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `tbl_resignation`
+--
+
+INSERT INTO `tbl_resignation` (`id`, `resigning_employee`, `department`, `reason`, `notice_date`, `resignation_date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, '12', '3', 'Job switch.', '2023-06-14', '2023-06-20', NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -413,6 +485,13 @@ CREATE TABLE `tbl_termination` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_termination`
+--
+
+INSERT INTO `tbl_termination` (`id`, `terminated_employee`, `department`, `termination_type`, `termination_date`, `reason`, `notice_date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, '27', '2', 'others', '2023-06-22', 'Poor fit to organizational culture.', '2023-06-15', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -583,7 +662,7 @@ ALTER TABLE `employee_salary`
 -- AUTO_INCREMENT for table `tbl_attendance`
 --
 ALTER TABLE `tbl_attendance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `tbl_department`
@@ -613,13 +692,13 @@ ALTER TABLE `tbl_holidays`
 -- AUTO_INCREMENT for table `tbl_leaves`
 --
 ALTER TABLE `tbl_leaves`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_overtime`
 --
 ALTER TABLE `tbl_overtime`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_additions`
@@ -643,19 +722,19 @@ ALTER TABLE `tbl_payroll_overtime`
 -- AUTO_INCREMENT for table `tbl_promotion`
 --
 ALTER TABLE `tbl_promotion`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_resignation`
 --
 ALTER TABLE `tbl_resignation`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_termination`
 --
 ALTER TABLE `tbl_termination`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_timesheet`
