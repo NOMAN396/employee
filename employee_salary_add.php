@@ -104,10 +104,6 @@
     </div>
     <?php
   if($_POST){
-    if($_POST['password']){
-      $_POST['password']=sha1(md5($_POST['password']));
-    }
-      
     $rs=$mysqli->common_create('employee_salary',$_POST);
     if(!$rs['error']){
       echo "<script>window.location='employee_salary_list.php'</script>";
