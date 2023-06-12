@@ -9,11 +9,11 @@
 
     <div class="row">
         <div class="col-md-12">
-        <form>
+        <form method="post">
             <div class="col-md-6">
             <div class="form-group">
                 <label>Name <span class="text-danger">*</span></label>
-                <input class="form-control" type="text">
+                <input class="form-control" name="name" type="text">
             </div>
             </div>
 
@@ -31,7 +31,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">$</span>
                     </div>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="unit_amount">
                     <div class="input-group-append">
                         <span class="input-group-text">.00</span>
                     </div>
@@ -42,19 +42,19 @@
             <div class="form-group">
                 <label class="d-block">Assignee</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="deduction_assignee" id="deduction_no_emp" value="option1" checked="">
+                    <input class="form-check-input" type="radio" name="" id="deduction_no_emp" value="option1" checked="">
                     <label class="form-check-label" for="deduction_no_emp">
                     No assignee
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="deduction_assignee" id="deduction_all_emp" value="option2">
+                    <input class="form-check-input" type="radio" name="" id="deduction_all_emp" value="option2">
                     <label class="form-check-label" for="deduction_all_emp">
                     All employees
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="deduction_assignee" id="deduction_single_emp" value="option3">
+                    <input class="form-check-input" type="radio" name="" id="deduction_single_emp" value="option3">
                     <label class="form-check-label" for="deduction_single_emp">
                     Select Employee
                     </label>
@@ -72,7 +72,7 @@
                 </div>
             </div>
                <div class="submit-section">
-                <button class="btn btn-primary submit-btn">Submit</button>
+                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
                </div>
             </form>
             <?php
