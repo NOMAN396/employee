@@ -24,16 +24,16 @@
                         </div>   
                   </div>
 
-<?php
-  if($_POST){
-    $rs=$mysqli->common_create('tbl_department',$_POST);
-    if(!$rs['error']){
-      echo "<script>window.location='department_list.php'</script>";
-    }else{
-        echo $rs['error'];
-    }
-  }
-?>
+    <?php
+      if($_POST){
+        $rs=$mysqli->common_create('tbl_department',$_POST);
+        if(!$rs['error']){
+          echo "<script>window.location='department_list.php'</script>";
+        }else{
+            echo $rs['error'];
+        }
+      }
+    ?>
                 </div>
                 
               </form>

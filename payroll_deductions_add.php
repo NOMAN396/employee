@@ -75,6 +75,16 @@
                 <button class="btn btn-primary submit-btn">Submit</button>
                </div>
             </form>
+            <?php
+      if($_POST){
+        $rs=$mysqli->common_create('tbl_payroll_deductions',$_POST);
+        if(!$rs['error']){
+          echo "<script>window.location='payroll_deductions.php'</script>";
+        }else{
+            echo $rs['error'];
+        }
+      }
+    ?>
         </div>
     </div>
 </div>

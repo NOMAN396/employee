@@ -86,6 +86,16 @@
                 <div class="submit-section">
                     <button class="btn btn-primary my-2">Submit</button>
                 </div>
+         <?php
+            if($_POST){
+            $rs=$mysqli->common_create('tbl_payroll_additions',$_POST);
+            if(!$rs['error']){
+                echo "<script>window.location='payroll_additions.php'</script>";
+            }else{
+                echo $rs['error'];
+            }
+            }
+         ?>
             </form>
         </div>
     </div>
