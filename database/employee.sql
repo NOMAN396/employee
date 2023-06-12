@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2023 at 09:00 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jun 12, 2023 at 03:06 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,17 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `employee`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `deduction`
---
-
-CREATE TABLE `deduction` (
-  `name` varchar(255) NOT NULL,
-  `default/unit amount` double(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -56,18 +45,6 @@ CREATE TABLE `employee_salary` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `payroll_item_additions`
---
-
-CREATE TABLE `payroll_item_additions` (
-  `name` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `default/unit amount` double(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_attendance`
 --
 
@@ -77,20 +54,6 @@ CREATE TABLE `tbl_attendance` (
   `att_date` date NOT NULL,
   `att_status` int(11) NOT NULL DEFAULT 0 COMMENT '0 Absent,1 Present'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_attendance`
---
-
-INSERT INTO `tbl_attendance` (`id`, `employee_id`, `att_date`, `att_status`) VALUES
-(1, 1, '2023-06-04', 1),
-(2, 2, '2023-06-04', 0),
-(3, 1, '2023-06-05', 1),
-(4, 2, '2023-06-05', 1),
-(5, 1, '2023-06-06', 0),
-(6, 2, '2023-06-06', 1),
-(7, 1, '2023-06-07', 0),
-(8, 2, '2023-06-07', 1);
 
 -- --------------------------------------------------------
 
@@ -114,16 +77,19 @@ CREATE TABLE `tbl_department` (
 --
 
 INSERT INTO `tbl_department` (`id`, `department_name`, `date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'HR', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '2023-06-01 06:49:27'),
-(2, 'HR', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
-(3, 'Compliance', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
-(4, 'Hr', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
-(5, 'Hr', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
-(6, 'adsfsda', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
-(7, 'adsfsda', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
-(8, 'adsfsda', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '2023-06-01 07:01:02'),
-(9, 'ads', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '2023-06-01 07:01:01'),
-(10, 'sgfdfg', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00');
+(1, 'Database Administration', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(2, 'Web Development', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(3, 'Software Development', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(4, 'UI/UX Design', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(5, 'Web Design', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(6, 'Quality Assurance', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(7, 'Business Development', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(8, 'IT Infrastructure', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(9, 'Sales & Marketing', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(10, 'HR & Compliance', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(11, 'Project Management', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(12, 'Accounting & Finance', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(13, 'Administration', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -147,9 +113,37 @@ CREATE TABLE `tbl_designations` (
 --
 
 INSERT INTO `tbl_designations` (`id`, `designation`, `date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Incharge', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(2, 'lkiuluiluil', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(3, 'fgfg', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL);
+(1, 'Junior Software Engineer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(2, 'Junior Web Developer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(3, 'Junior UI/UX Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(4, 'Junior Database Administrator', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(5, 'Software Engineer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(6, 'Web Developer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(7, 'UI/UX Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(8, 'Database Administrator', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(9, 'Senior Software Engineer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(10, 'Senior Web Developer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(11, 'Senior UI/UX Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(12, 'Senior Database Administrator', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(13, 'Officer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(14, 'Executive', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(15, 'Senior Executive', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(16, 'Administrative Assistant', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(17, 'System Administrator', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(18, 'Quality Assurance Tester', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(19, 'Project Manager', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(20, 'Team Leader', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(21, 'Business Analyst', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(22, 'Data Analyst', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(23, 'Data Scientist', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(24, 'Data Engineer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(25, 'Database Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(26, 'Assistant Manager', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(27, 'Junior Web Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(28, 'Senior Web Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(29, 'Intern', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(30, 'Senior Officer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(31, 'Senior Executive', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -162,7 +156,7 @@ CREATE TABLE `tbl_employees` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `phone` int(50) NOT NULL,
+  `phone` varchar(15) DEFAULT NULL,
   `employee_id` varchar(255) DEFAULT NULL,
   `department_id` int(11) DEFAULT NULL,
   `designation_id` int(11) DEFAULT NULL,
@@ -181,8 +175,33 @@ CREATE TABLE `tbl_employees` (
 --
 
 INSERT INTO `tbl_employees` (`id`, `first_name`, `last_name`, `email`, `phone`, `employee_id`, `department_id`, `designation_id`, `joining_date`, `yearly_leave`, `image`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'jamal', 'uddin', 'jamal@email.com', 123, '001', 6, 3, '2023-06-27', 22, '16858556745844.jpg', NULL, NULL, NULL, NULL, NULL),
-(2, 'Noman', 'Hossain', 'noman@gmail.com', 15, '002', 3, 2, '2020-12-01', 22, NULL, NULL, NULL, NULL, NULL, NULL);
+(1, 'Abdullah', 'Ali', 'ali_abdullah22@gmail.com', '01987654525', 'PM11010101', 11, 19, '2011-01-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 'Saiful', 'Islam', 'saiful_islam98@gmail.com', '01898542163', 'PM17010209', 11, 20, '2017-06-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'Mosharraf', 'Khan', 'mosharraf_khan996@gmail.com', '01789653247', 'AF16120301', 12, 15, '2016-03-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'Monirul', 'Islam', 'monirul_islam552@gmail.com', '01879451236', 'DA16130102', 13, 15, '2016-01-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 'Hasan', 'Ali', 'ali_hasan766@gmail.com', '01987654321', 'HC14100101', 10, 26, '2014-04-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 'Masud', 'Khan', 'masud_khan11@gmail.com', '01875659832', 'SM17090309', 9, 14, '2017-03-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 'Anwar', 'Hossain', 'anwar_hossain51@gmail.com', '015589632584', 'II15080102', 8, 17, '2015-01-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 'Imran', 'Khan', 'imran_khan111@gmail.com', '01721002773', 'BD13070101', 7, 21, '2013-01-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, 'Rezaul', 'Islam', 'rezaul_islam214@gmail.com', '01558796544', 'QA150601', 6, 18, '2015-06-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, 'Noman', 'Hossain', 'noman@yahoo.com', '01622875968', 'WD230219', 5, 27, '2023-06-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, 'Jasim', 'Uddin', 'jasimuddinm180@gmail.com', '015221875658', 'WD14020113', 2, 10, '2014-04-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(12, 'Rabiul', 'Hossein', 'rabiul@yahoo.com', '01785654987', 'SD18030209', 3, 5, '2018-05-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(13, 'Safayet', 'Ullah', 'safayet@yahoo.com', '01875321657', 'WD22020315', 2, 2, '2022-06-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, 'Ibrahim', 'Khalil', 'ikshakil@yahoo.com', '01963852741', 'UD19040102', 4, 11, '2019-02-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(15, 'Raihan', 'Sazzad', 'raihan88@yahoo.com', '01554789631', 'DA19010205', 1, 8, '2019-05-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 'Thouhidul', 'Islam', 'thouhid77@yahoo.com', '01752865324', 'II18080207', 8, 17, '2018-05-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, 'Sharmin ', 'Akter', 'sharmin_akter21@gmail.com', '01587658214', 'DA21010217', 1, 25, '2021-06-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(18, 'Maksuda', 'Akter', 'maksuda93@yahoo.com', '01622147862', 'DA22010517', 1, 23, '2022-08-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(19, 'Mahmuda', 'Akter', 'mahmuda97@gmail.com', '01789654123', 'DA22010618', 1, 24, '2022-05-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(20, 'Fahmida', 'Akter', 'fahmida883@gmail.com', '01883214756', 'DA22010419', 1, 22, '2022-08-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(21, 'Mojahidul', 'Islam', 'mojahidul65@yahoo.com', '01954128754', 'SD23030308', 3, 1, '2023-03-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(22, 'Ahtesanul Hoque', 'Kaiser', 'kaiser43@yahoo.com', '01552478963', 'UD20040205', 4, 7, '2020-01-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(23, 'Towhidul', 'Islam', 'towhid_99@yahoo.com', '01721547853', 'SD18030206', 3, 9, '2018-09-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(24, 'Shariful ', 'Islam', 'shariful0606@yahoo.com', '01687541235', 'WD15020106', 2, 10, '2015-03-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(25, 'Tamim', 'Iqbal', 'tamim222@yahoo.com', '01557812439', 'DA17010103', 1, 12, '2017-06-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(26, 'Mushfiqur ', 'Rahim', 'mushfiq66@yahoo.com', '01654987321', 'DA20010211', 1, 8, '2020-03-01', 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(27, 'Abul', 'Hasan', 'abul_hasan@yahoo.com', '01752941661', 'WD22020316', 2, 2, '2022-09-01', 22, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -230,17 +249,6 @@ CREATE TABLE `tbl_leaves` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `tbl_leaves`
---
-
-INSERT INTO `tbl_leaves` (`id`, `employee_id`, `starting_at`, `ending_on`, `days`, `reason`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 0, '0000-00-00', '2023-06-28', 10, 'jhhjjhhjhjh', NULL, NULL, NULL, NULL, '2023-06-02 03:30:30'),
-(2, 0, '2023-05-27', '2023-06-16', 21, 'gjhgjgj', NULL, NULL, NULL, NULL, '2023-06-02 19:26:29'),
-(3, 0, '2023-06-09', '2023-06-16', 7, 'yyyy', NULL, NULL, NULL, NULL, '2023-06-04 07:54:53'),
-(4, 1, '2023-06-04', '2023-06-06', 3, 'Personal\r\n', NULL, NULL, NULL, NULL, NULL),
-(5, 1, '2023-06-08', '2023-06-10', 3, 'Personals', NULL, NULL, NULL, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -260,14 +268,6 @@ CREATE TABLE `tbl_overtime` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_overtime`
---
-
-INSERT INTO `tbl_overtime` (`id`, `employee`, `overtime_date`, `hours`, `type`, `description`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'JASIM', '2023-06-01', 14, 'EXTRA', 'ADSFSDGDGD', NULL, NULL, NULL, NULL, '2023-06-02 11:07:56'),
-(2, 'Md. Rabiul Hossain', '2023-06-16', 2, '2x', 'xyz', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -391,13 +391,6 @@ CREATE TABLE `tbl_termination` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `tbl_termination`
---
-
-INSERT INTO `tbl_termination` (`id`, `terminated_employee`, `department`, `termination_type`, `termination_date`, `reason`, `notice_date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Safayet Ullah', NULL, 'others', '2023-06-16', 'xyz', '2023-06-16', NULL, NULL, NULL, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -419,16 +412,6 @@ CREATE TABLE `tbl_timesheet` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_timesheet`
---
-
-INSERT INTO `tbl_timesheet` (`id`, `employee`, `a_date`, `deadline`, `projects`, `a_hours`, `hours`, `description`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'jhjjhjjhhkhhhhhhh', '2023-06-27', '0000-00-00', 'Office Management', 120, 80, 'fghsdfgsdvgfgsfghghkhkh', NULL, NULL, NULL, NULL, '2023-06-02 08:32:17'),
-(2, NULL, '2023-06-28', '0000-00-00', 'Office Management', 120, 80, 'kgjggffddfhhj', NULL, NULL, NULL, NULL, '2023-06-02 08:34:26'),
-(3, NULL, '2023-06-30', '0000-00-00', 'Hospital Administration', 220, 150, 'gghghghghh', NULL, NULL, NULL, NULL, NULL),
-(4, NULL, '2023-06-23', '0000-00-00', 'Project Management', 120, 70, 'bnbnbbuu', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -459,7 +442,8 @@ INSERT INTO `tbl_users` (`id`, `name`, `email`, `contact_no`, `password`, `image
 (2, 'jasim uddin', 'jasimuddinm180@gmail.com', '123456', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, NULL, NULL, NULL, NULL, NULL),
 (6, 'josim1205', 'jasim@gmail.com', '123', '343ec46f518531dfd41853227d6409a5ab91e994', '16851165814532.jfif', NULL, NULL, NULL, NULL, NULL),
 (9, 'jasim123', 'fuad@gmail.com', '123', '343ec46f518531dfd41853227d6409a5ab91e994', '16851167664475.jfif', NULL, NULL, NULL, NULL, NULL),
-(11, 'jasim', 'noman@gmail.com', '123', '343ec46f518531dfd41853227d6409a5ab91e994', '16851170881402.jfif', NULL, NULL, NULL, NULL, NULL);
+(11, 'jasim', 'noman@gmail.com', '123', '343ec46f518531dfd41853227d6409a5ab91e994', '16851170881402.jfif', NULL, NULL, NULL, NULL, NULL),
+(12, 'Burhan Uddin Fuad', 'afmfuad96@gmail.com', '01676878734', 'adcd7048512e64b48da55b027577886ee5a36350', NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -576,25 +560,25 @@ ALTER TABLE `employee_salary`
 -- AUTO_INCREMENT for table `tbl_attendance`
 --
 ALTER TABLE `tbl_attendance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_department`
 --
 ALTER TABLE `tbl_department`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_designations`
 --
 ALTER TABLE `tbl_designations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `tbl_employees`
 --
 ALTER TABLE `tbl_employees`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `tbl_holidays`
@@ -606,13 +590,13 @@ ALTER TABLE `tbl_holidays`
 -- AUTO_INCREMENT for table `tbl_leaves`
 --
 ALTER TABLE `tbl_leaves`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_overtime`
 --
 ALTER TABLE `tbl_overtime`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_additions`
@@ -648,19 +632,19 @@ ALTER TABLE `tbl_resignation`
 -- AUTO_INCREMENT for table `tbl_termination`
 --
 ALTER TABLE `tbl_termination`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_timesheet`
 --
 ALTER TABLE `tbl_timesheet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
