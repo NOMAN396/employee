@@ -61,19 +61,19 @@
                 <div class="form-group my-2">
                     <label class="d-block">Assignee</label>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="addition_assignee" id="addition_no_emp" value="option1" checked="">
+                        <input class="form-check-input" type="radio"  id="addition_no_emp" value="option1" checked="">
                         <label class="form-check-label" for="addition_no_emp">
                         No assignee
                         </label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="addition_assignee" id="addition_all_emp" value="option2">
+                        <input class="form-check-input" type="radio"  id="addition_all_emp" value="option2">
                         <label class="form-check-label" for="addition_all_emp">
                         All employees
                         </label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="addition_assignee" id="addition_single_emp" value="option3">
+                        <input class="form-check-input" type="radio"  id="addition_single_emp" value="option3">
                         <label class="form-check-label" for="addition_single_emp">
                         Select Employee
                         </label>

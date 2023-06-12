@@ -48,19 +48,19 @@
             <div class="form-group">
                 <label class="d-block">Assignee</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="deduction_assignee" id="deduction_no_emp" value="option1" checked="">
+                    <input class="form-check-input" type="radio" id="deduction_no_emp" value="option1" checked="">
                     <label class="form-check-label" for="deduction_no_emp">
                     No assignee
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="deduction_assignee" id="deduction_all_emp" value="option2">
+                    <input class="form-check-input" type="radio"  id="deduction_all_emp" value="option2">
                     <label class="form-check-label" for="deduction_all_emp">
                     All employees
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="deduction_assignee" id="deduction_single_emp" value="option3">
+                    <input class="form-check-input" type="radio"  id="deduction_single_emp" value="option3">
                     <label class="form-check-label" for="deduction_single_emp">
                     Select Employee
                     </label>

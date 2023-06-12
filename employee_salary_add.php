@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="submit-section">
-                    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                    <button type="submit" class="btn btn-primary px-5 my-2">Submit</button>
                 </div>
             </form>
         </div>
