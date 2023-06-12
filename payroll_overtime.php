@@ -11,7 +11,7 @@
     </div>
     <hr>
     <div class="col-md-12 d-flex justify-content-end">
-    <a href="<?= $base_url?>payroll_additions_add.php" class="btn btn-success px-4">Add New</a>
+    <a href="<?= $base_url?>payroll_overtime_add.php" class="btn btn-success px-4">Add New</a>
     </div>
     <table class="table">
         <tr>
