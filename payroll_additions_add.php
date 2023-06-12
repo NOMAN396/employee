@@ -20,7 +20,7 @@
                 <div class="col-md-6 mb-3">
                 <div class="form-group">
                     <label>Category <span class="text-danger">*</span></label>
-                    <select class="select">
+                    <select class="form-select form-select-md">
                         <option>Select a category</option>
                         <option>Monthly remuneration</option>
                         <option>Additional remuneration</option>
