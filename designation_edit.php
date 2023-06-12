@@ -38,18 +38,17 @@
                             <div class="form-group">
                             <label>Designation Name</label>
                             <input type="text" name="designation" value="<?= $d->designation ?>"class="form-control">
-                                
-                            </div>
                         </div>
-                     
-                        <div class="col-sm-6">
+                </div>
+                     <div class="row">
+                        <div class="col-sm-6 d-block">
                             <div class="form-group">
-                            <label>basic</label>
-                            <input type="text" name="designation" value="<?= $d->basic ?>"class="form-control">
+                            <label>Basic</label>
+                            <input type="text" name="basic" value="<?= $d->basic ?>"class="form-control">
                             <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
                             </div>
                         </div>
-                     
+                        </div>
                         
                   </div>
 

@@ -17,7 +17,7 @@
             </div>
             <?php
                   $where['id']=$_GET['id'];
-                  $data=$mysqli->common_select('tbl_department','*',$where);
+                  $data=$mysqli->common_select('tbl_payroll_overtime','*',$where);
                  
                   if(!$data['error'] && count($data['data'])>0)
                     $d=$data['data'][0];
@@ -50,9 +50,9 @@
 
             <?php
   if($_POST){
-    $rs=$mysqli->common_update('tbl_leaves',$_POST,$where);
+    $rs=$mysqli->common_update('tbl_payroll_overtime',$_POST,$where);
     if(!$rs['error']){
-      echo "<script>window.location='employee_leave.php'</script>";
+      echo "<script>window.location='payroll_overtime.php'</script>";
     }else{
         echo $rs['error'];
     }
