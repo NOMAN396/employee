@@ -8,31 +8,31 @@
     
     <div class="row">
         <div class="col-md-12">
-        <form>
+        <form method="post">
             <div class="col-md-6">
             <div class="form-group">
                 <label>Name <span class="text-danger">*</span></label>
-                <input class="form-control" type="text">
+                <input class="form-control" type="text" name="name">
             </div>
             </div>
-            <div class="col-md-6 my-3">
+            <!-- <div class="col-md-6 my-3">
             <div class="form-group">
                 <label>Rate Type <span class="text-danger">*</span></label>
-                <select class="form-select form-select-md">
+                <select class="form-select form-select-md" name="">
                     <option>-</option>
                     <option>Daily Rate</option>
                     <option>Hourly Rate</option>
                 </select>
             </div>
-            </div>
+            </div> -->
             <div class="col-md-6">
             <div class="form-group">
                 <label>Rate <span class="text-danger">*</span></label>
-                <input class="form-control" type="text">
+                <input class="form-control" name="rate" type="text">
             </div>
             </div>
             <div class="submit-section">
-                <button class="btn btn-primary my-3">Submit</button>
+                <button type="submit" class="btn btn-primary my-3">Submit</button>
             </div>
         </form>
         <?php

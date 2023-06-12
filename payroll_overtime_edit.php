@@ -8,14 +8,8 @@
     
     <div class="row">
         <div class="col-md-12">
-        <form>
-            <div class="col-md-6">
-            <div class="form-group">
-                <label>Name <span class="text-danger">*</span></label>
-                <input class="form-control" type="text">
-            </div>
-            </div>
-            <?php
+
+        <?php
                   $where['id']=$_GET['id'];
                   $data=$mysqli->common_select('tbl_payroll_overtime','*',$where);
                  
@@ -26,8 +20,17 @@
                     exit;
                   }
                 ?>
+        <form method="post">
 
+            <div class="col-md-6">
+            <div class="form-group">
+                <label>Name <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" name="name" value="<?= $d->name ?>" >
+            </div>
+            </div>
            
+
+<!--            
             <div class="col-md-6 my-3">
             <div class="form-group">
                 <label>Rate Type <span class="text-danger">*</span></label>
@@ -36,16 +39,16 @@
                     <option>Daily Rate</option>
                     <option>Hourly Rate</option>
                 </select>
-            </div>
-            </div>
+            </div> -->
+            <!-- </div> -->
             <div class="col-md-6">
             <div class="form-group">
                 <label>Rate <span class="text-danger">*</span></label>
-                <input class="form-control" type="text">
+                <input class="form-control" type="text" name="rate" value="<?= $d->rate ?>">
             </div>
             </div>
             <div class="submit-section">
-                <button class="btn btn-primary my-3">Submit</button>
+                <button type="submit" class="btn btn-primary my-3">Submit</button>
             </div>
 
             <?php

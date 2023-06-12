@@ -10,25 +10,8 @@
     
         <div class="row">
             <div class="col-md-12">
-            <form>
-                <div class="col-md-6 mb-3">
-                <div class="form-group">
-                    <label>Name <span class="text-danger">*</span></label>
-                    <input class="form-control" type="text">
-                </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                <div class="form-group">
-                    <label>Category <span class="text-danger">*</span></label>
-                    <select class="form-select form-select-md">
-                        <option>Select a category</option>
-                        <option>Monthly remuneration</option>
-                        <option>Additional remuneration</option>
-                    </select>
-                </div>
-                </div>
 
-                <?php
+            <?php
                   $where['id']=$_GET['id'];
                   $data=$mysqli->common_select('tbl_payroll_additions','*',$where);
                  
@@ -39,6 +22,26 @@
                     exit;
                   }
                 ?>
+            <form method="post">
+                <div class="col-md-6 mb-3">
+                   
+                <div class="form-group">
+                    <label>Name <span class="text-danger">*</span></label>
+                    <input class="form-control" name="name" type="text" value="<?= $d->name ?>">
+                </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label>Category <span class="text-danger">*</span></label>
+                    <select class="form-select form-select-md" name="category" value="<?= $d->category ?>">
+                        <option>Select a category</option>
+                        <option>Monthly remuneration</option>
+                        <option>Additional remuneration</option>
+                    </select>
+                </div>
+                </div>
+
+               
 
                 <div class="col-md-6 mb-3">
                 <div class="form-group">
@@ -47,7 +50,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">$</span>
                         </div>
-                        <input type="text" class="form-control">
+                        <input type="text"  name="unit_amount" value="<?= $d->unit_amount ?>" class="form-control">
                         <div class="input-group-append">
                             <span class="input-group-text">.00</span>
                         </div>
@@ -88,7 +91,7 @@
                     </div>
                 </div>
                 <div class="submit-section">
-                    <button class="btn btn-primary my-2">Submit</button>
+                    <button type="submit" class="btn btn-primary my-2">Submit</button>
                 </div>
 
                 <?php
