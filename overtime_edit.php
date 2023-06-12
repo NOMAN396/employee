@@ -29,11 +29,8 @@
                   }
                 ?>
 
-
-                   
                     <form method="POST">
-									<div class="form-group col-sm-7">
-										<input name="employee" class="form-control" value="<?= $d->employee ?>" required type="text">
+									<div class="form-group col-sm-7">	
                     <select name="employee" id="" class="form-control">
                     <?php
                                       $data=$mysqli->common_select('tbl_employees');
