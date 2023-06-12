@@ -10,14 +10,8 @@
       
         <div class="row">
           <div class="col-md-12">
-
-           
               <form enctype="multipart/form-data" action="" method="post">
-                
-               
-           
                 <div class="body">
-                 
                   <div class="col-sm-8">
                             <div class="form-group">
                             <label>Promotion For <span class="text-danger">*</span></label>
@@ -50,14 +44,32 @@
                         <div class="col-sm-8">
                             <div class="form-group">
                             <label>Promotion From <span class="text-danger">*</span></label>
-											<input name="promoted_designation_from" class="form-control " type="text">
+											
+                                <select class="form-control" id="department_id" name="promoted_designation_from">
+                                  <?php
+                                      $data=$mysqli->common_select('tbl_designations');
+                                      if(!$data['error']){
+                                          foreach($data['data'] as $dt){
+                                  ?>
+                                      <option value="<?= $dt->id ?>"><?= $dt->designation ?></option>
+                                  <?php } } ?>
+                              </select>
                             </div>
                         </div>
 
                         <div class="col-sm-8">
                             <div class="form-group">
                             <label>Promotion To<span class="text-danger">*</span></label>
-										<input name="promoted_designation_to" class="form-control" type="text">
+										
+                                        <select class="form-control" id="department_id" name="promoted_designation_to">
+                                  <?php
+                                      $data=$mysqli->common_select('tbl_designations');
+                                      if(!$data['error']){
+                                          foreach($data['data'] as $dt){
+                                  ?>
+                                      <option value="<?= $dt->id ?>"><?= $dt->designation ?></option>
+                                  <?php } } ?>
+                              </select>
                             </div>
                         </div>
 
