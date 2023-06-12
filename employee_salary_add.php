@@ -5,64 +5,20 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Employee salary</li>
     </ol>
-    <div class="content">
-            <h5 class="modal-title">Add Staff Salary</h5>
-        <div class="body">
-    <form method="post">
-    <?php
-    function calculateSalary($employeeId, $conn) {
-    $sql = "SELECT * FROM employees WHERE id = '$employeeId'";
-    $result = mysqli_query($conn, $sql);
-    if (!$result) {
-        die("Error retrieving employee details: " . mysqli_error($conn));
-    }
-    
-    $employee = mysqli_fetch_assoc($result);
-    
-    // Calculate earnings
-    $basic = $employee['basic'];
-    $da = $basic * 0.4;
-    $hra = $basic * 0.15;
-    $conveyance = $employee['conveyance'];
-    $allowance = $employee['allowance'];
-    $medicalAllowance = $employee['medical_allowance'];
-    $othersEarnings = $employee['others_earnings'];
-    
-    $earnings = $basic + $da + $hra + $conveyance + $allowance + $medicalAllowance + $othersEarnings;
-    
-    // Calculate deductions
-    $tds = $employee['tds'];
-    $esi = $employee['esi'];
-    $pf = $employee['pf'];
-    $leave = $employee['leave'];
-    $profTax = $employee['prof_tax'];
-    $labourWelfare = $employee['labour_welfare'];
-    $othersDeductions = $employee['others_deductions'];
-    
-    $deductions = $tds + $esi + $pf + $leave + $profTax + $labourWelfare + $othersDeductions;
-    
-    // Calculate the net salary
-    $netSalary = $earnings - $deductions;
-    
-    // Update the salary in the database
-    $updateSql = "UPDATE employees SET salary = '$netSalary' WHERE id = '$employeeId'";
-    $updateResult = mysqli_query($conn, $updateSql);
-    if (!$updateResult) {
-        die("Error updating salary: " . mysqli_error($conn));
-    }
-    
-    echo "Salary updated successfully!";
-}
-?>
 
                 <div class="row"> 
                     <div class="col-sm-6"> 
                         <div class="form-group">
                             <label>Select Staff</label>
-                            <select class="select"> 
-                                <option>John Doe</option>
-                                <option>Richard Miles</option>
-                            </select>
+                            <select class="form-control" id="department_id" name="name">
+                                  <?php
+                                      $data=$mysqli->common_select('tbl_employees');
+                                      if(!$data['error']){
+                                          foreach($data['data'] as $dt){
+                                  ?>
+                                      <option value="<?= $dt->id ?>"><?= $dt->first_name." ".$dt->last_name ?></option>
+                                  <?php } } ?>
+                              </select>
                         </div>
                     </div>
                     <div class="col-sm-6"> 
@@ -141,15 +97,25 @@
                     </div>
                 </div>
                 <div class="submit-section">
-                    <button class="btn btn-primary submit-btn">Submit</button>
+                    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
                 </div>
             </form>
         </div>
     </div>
-            <?php
-                $employeeId = 123; // Replace 123 with the actual employee ID
-                calculateSalary($employeeId, $conn);
-             ?>
+    <?php
+  if($_POST){
+    if($_POST['password']){
+      $_POST['password']=sha1(md5($_POST['password']));
+    }
+      
+    $rs=$mysqli->common_create('employee_salary',$_POST);
+    if(!$rs['error']){
+      echo "<script>window.location='employee_salary_list.php'</script>";
+    }else{
+        echo $rs['error'];
+    }
+  }
+?>
 
 
 </div>
