@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2023 at 03:06 AM
+-- Generation Time: Jun 12, 2023 at 09:00 AM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -100,7 +100,7 @@ INSERT INTO `tbl_department` (`id`, `department_name`, `date`, `created_at`, `cr
 CREATE TABLE `tbl_designations` (
   `id` int(11) NOT NULL,
   `designation` varchar(255) NOT NULL,
-  `date` date NOT NULL,
+  `basic` double(8,2) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `updated_at` datetime NOT NULL,
@@ -112,38 +112,38 @@ CREATE TABLE `tbl_designations` (
 -- Dumping data for table `tbl_designations`
 --
 
-INSERT INTO `tbl_designations` (`id`, `designation`, `date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Junior Software Engineer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(2, 'Junior Web Developer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(3, 'Junior UI/UX Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(4, 'Junior Database Administrator', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(5, 'Software Engineer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(6, 'Web Developer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(7, 'UI/UX Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(8, 'Database Administrator', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(9, 'Senior Software Engineer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(10, 'Senior Web Developer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(11, 'Senior UI/UX Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(12, 'Senior Database Administrator', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(13, 'Officer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(14, 'Executive', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(15, 'Senior Executive', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(16, 'Administrative Assistant', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(17, 'System Administrator', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(18, 'Quality Assurance Tester', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(19, 'Project Manager', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(20, 'Team Leader', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(21, 'Business Analyst', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(22, 'Data Analyst', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(23, 'Data Scientist', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(24, 'Data Engineer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(25, 'Database Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(26, 'Assistant Manager', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(27, 'Junior Web Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(28, 'Senior Web Designer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(29, 'Intern', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(30, 'Senior Officer', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(31, 'Senior Executive', '0000-00-00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL);
+INSERT INTO `tbl_designations` (`id`, `designation`, `basic`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, 'Junior Software Engineer', 17000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(2, 'Junior Web Developer', 17000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(3, 'Junior UI/UX Designer', 17000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(4, 'Junior Database Administrator', 17000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(5, 'Software Engineer', 20000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(6, 'Web Developer', 20000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(7, 'UI/UX Designer', 20000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(8, 'Database Administrator', 20000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(9, 'Senior Software Engineer', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(10, 'Senior Web Developer', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(11, 'Senior UI/UX Designer', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(12, 'Senior Database Administrator', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(13, 'Officer', 15000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(14, 'Executive', 18000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(15, 'Senior Executive', 20000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(16, 'Administrative Assistant', 15000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(17, 'System Administrator', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(18, 'Quality Assurance Tester', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(19, 'Project Manager', 28750.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(20, 'Team Leader', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(21, 'Business Analyst', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(22, 'Data Analyst', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(23, 'Data Scientist', 22000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(24, 'Data Engineer', 22000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(25, 'Database Designer', 20000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(26, 'Assistant Manager', 30000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(27, 'Junior Web Designer', 17000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(28, 'Senior Web Designer', 25000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(29, 'Intern', 8000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(30, 'Senior Officer', 17000.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(31, 'Senior Executive', 0.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '2023-06-12 07:12:56');
 
 -- --------------------------------------------------------
 
@@ -279,13 +279,22 @@ CREATE TABLE `tbl_payroll_additions` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `category` varchar(255) DEFAULT NULL,
-  `unit_amount` double(8,2) DEFAULT NULL,
+  `unit_amount` varchar(10) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `created_by` varchar(255) DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_payroll_additions`
+--
+
+INSERT INTO `tbl_payroll_additions` (`id`, `name`, `category`, `unit_amount`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, 'Leave balance amount', 'Monthly remuneration', '$5', NULL, NULL, NULL, NULL, NULL),
+(2, 'Arrears of salary', 'Additional remuneration', '$8', NULL, NULL, NULL, NULL, NULL),
+(3, 'Gratuity', 'Monthly remuneration', '$20', NULL, NULL, NULL, NULL, '2023-06-12 08:58:19');
 
 -- --------------------------------------------------------
 
@@ -304,6 +313,13 @@ CREATE TABLE `tbl_payroll_deductions` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `tbl_payroll_deductions`
+--
+
+INSERT INTO `tbl_payroll_deductions` (`id`, `name`, `unit_amount`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, 'Absent amount', 12.00, NULL, NULL, NULL, NULL, '2023-06-12 08:59:51');
+
 -- --------------------------------------------------------
 
 --
@@ -320,6 +336,13 @@ CREATE TABLE `tbl_payroll_overtime` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_payroll_overtime`
+--
+
+INSERT INTO `tbl_payroll_overtime` (`id`, `name`, `rate`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, 'Normal day OT', 'hourly 1.5', NULL, NULL, NULL, NULL, '2023-06-12 08:59:28');
 
 -- --------------------------------------------------------
 
@@ -602,19 +625,19 @@ ALTER TABLE `tbl_overtime`
 -- AUTO_INCREMENT for table `tbl_payroll_additions`
 --
 ALTER TABLE `tbl_payroll_additions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_deductions`
 --
 ALTER TABLE `tbl_payroll_deductions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_overtime`
 --
 ALTER TABLE `tbl_payroll_overtime`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_promotion`
