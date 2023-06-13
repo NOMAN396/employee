@@ -42,7 +42,7 @@
 									</div>
 									<div class="form-group">
 										<label>Hours<span class="text-danger">*</span></label>
-										<input class="form-control" name="hours" required type="time">
+										<input class="form-control" name="hours" required type="number">
 									</div>
 									<div class="form-group">
 										<label>Description<span class="text-danger">*</span></label>

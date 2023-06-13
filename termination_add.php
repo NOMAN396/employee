@@ -48,6 +48,8 @@
             <label>Termination Type <span class="text-danger">*</span></label>
             <select name="termination_type" class="form-control " type="text">
                  <option value="miscoduct">Misconduct</option>
+                  <option value="others">Incompatibility</option>
+                  <option value="others">Job abandonment</option>
                   <option value="others">Others</option>
               </select>
                   </div>

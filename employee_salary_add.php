@@ -97,17 +97,13 @@
                     </div>
                 </div>
                 <div class="submit-section">
-                    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                    <button type="submit" class="btn btn-primary px-5 my-2">Submit</button>
                 </div>
             </form>
         </div>
     </div>
     <?php
   if($_POST){
-    if($_POST['password']){
-      $_POST['password']=sha1(md5($_POST['password']));
-    }
-      
     $rs=$mysqli->common_create('employee_salary',$_POST);
     if(!$rs['error']){
       echo "<script>window.location='employee_salary_list.php'</script>";
