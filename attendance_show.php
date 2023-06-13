@@ -31,8 +31,8 @@
                 <a title="Update" href="<?= $base_url?>attendance_edit.php?id=<?= $d->id ?>">
                     <i class="fa fa-edit"></i>
                 </a>
-                <a title="Update" href="<?= $base_url?>attendance_individual_show.php?id=<?= $d->id ?>">Show
-                    <!-- <i class="fa fa-show"></i> -->
+                <a title="Update" href="<?= $base_url?>attendance_individual_show.php?id=<?= $d->id ?>">
+                <i class="fa fa-eye"></i>
                 </a>
             </td>
         </tr>
