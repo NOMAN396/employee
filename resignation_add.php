@@ -26,7 +26,7 @@
                                 if(!$data['error']){
                                     foreach($data['data'] as $dt){
                                         ?>
-                                        <option value="<?= $dt->id ?>"><?= $dt->first_name.$dt->last_name ?></option>
+                                        <option value="<?= $dt->id ?>"><?= $dt->first_name." ".$dt->last_name ?></option>
                                    <?php } } ?>
                             </select>
                             </div>
