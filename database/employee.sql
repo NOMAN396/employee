@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2023 at 03:00 AM
+-- Generation Time: Jun 14, 2023 at 04:35 AM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -361,7 +361,8 @@ CREATE TABLE `tbl_payroll_additions` (
 INSERT INTO `tbl_payroll_additions` (`id`, `name`, `category`, `unit_amount`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
 (1, 'Leave balance amount', 'Monthly remuneration', '$5', NULL, NULL, NULL, NULL, NULL),
 (2, 'Arrears of salary', 'Additional remuneration', '$8', NULL, NULL, NULL, NULL, NULL),
-(3, 'Gratuity', 'Monthly remuneration', '$20', NULL, NULL, NULL, NULL, '2023-06-12 08:58:19');
+(3, 'Gratuity', 'Monthly remuneration', '$20', NULL, NULL, NULL, NULL, '2023-06-12 08:58:19'),
+(4, 'Gratuity', 'Select a category', '$20', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -385,7 +386,10 @@ CREATE TABLE `tbl_payroll_deductions` (
 --
 
 INSERT INTO `tbl_payroll_deductions` (`id`, `name`, `unit_amount`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Absent amount', 12.00, NULL, NULL, NULL, NULL, '2023-06-12 08:59:51');
+(1, 'Absent amount', 12.00, NULL, NULL, NULL, NULL, '2023-06-12 08:59:51'),
+(2, 'Absent amount', 12.00, NULL, NULL, NULL, NULL, NULL),
+(3, 'Advance', 7.00, NULL, NULL, NULL, NULL, NULL),
+(4, 'Unpaid leave', 3.00, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -409,7 +413,10 @@ CREATE TABLE `tbl_payroll_overtime` (
 --
 
 INSERT INTO `tbl_payroll_overtime` (`id`, `name`, `rate`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Normal day OT', 'hourly 1.5', NULL, NULL, NULL, NULL, '2023-06-12 08:59:28');
+(1, 'Normal day OT', 'hourly 1.5', NULL, NULL, NULL, NULL, '2023-06-12 08:59:28'),
+(2, 'Normal day OT 1.5x', 'hourly 1.5', NULL, NULL, NULL, NULL, NULL),
+(3, 'Public holiday OT 3x', 'hourly 3', NULL, NULL, NULL, NULL, NULL),
+(4, 'Rest day OT 2x', 'hourly 2', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -704,19 +711,19 @@ ALTER TABLE `tbl_overtime`
 -- AUTO_INCREMENT for table `tbl_payroll_additions`
 --
 ALTER TABLE `tbl_payroll_additions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_deductions`
 --
 ALTER TABLE `tbl_payroll_deductions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_overtime`
 --
 ALTER TABLE `tbl_payroll_overtime`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_promotion`
