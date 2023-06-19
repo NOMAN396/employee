@@ -19,7 +19,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Admin Login</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Employee Login</h3></div>
                                     <div class="card-body">
                                         <form action="" method="post">
                                             <div class="form-floating mb-3">
@@ -50,7 +50,7 @@
                                                 $_SESSION['email']=$rs['data'][0]->email;
                                                 $_SESSION['image']=$rs['data'][0]->image;
                                                 }
-                                                echo "<script>window.location='index.php'</script>";
+                                                echo "<script>window.location='emp_index.php'</script>";
                                             }else{
                                                 echo $rs['error'];
                                             }
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="card-footer text-center py-3">
                                         <div class="small"><a href="register.php">Need an account? Sign up!</a></div>
-                                        <div class="small"><a href="employee_login.php">Employee Login</a></div>
+                                        <div class="small"><a href="login.php">Admin Login</a></div>
                                     </div>
                                 </div>
                             </div>
