@@ -18,8 +18,8 @@
 					</a>
 					<div class="collapse" id="colemp" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
-							<a class="nav-link" href="<?= $base_url?>#">Apply Leave</a>
-							<a class="nav-link" href="<?= $base_url?>#">View Leave</a>
+							<a class="nav-link" href="<?= $base_url?>apply_leave.php">Apply Leave</a>
+							<a class="nav-link" href="<?= $base_url?>view_leave.php">View Leave</a>
 						</nav>
 					</div>
 
