@@ -46,7 +46,7 @@
             <td><?= $d->tax ?></td>
             <td><?= $d->total ?></td>
             <td>
-                <a title="Show" href="<?= $base_url?>attendance_show.php?id=<?= $d->att_date ?>">
+                <a title="Show" href="<?= $base_url?>employee_salary_show.php?id=">
                             <i class="fa fa-eye"></i>
                 </a>
             </td>
