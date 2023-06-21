@@ -5,12 +5,10 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Employee salary</li>
     </ol>
-    <a href="employee_salary_add.php"class="btn btn-primary align-right">ADD NEW</a>
+    <a href="employee_salary_add.php"class="btn btn-primary align-right mb-2">ADD NEW</a>
     <table class="table table-striped table-bordered">
         <thead class="bg-dark text-white">
             <tr>
-                
-            
                 <th>Year</th>
                 <th>Month</th>
                 <th>Basic</th>

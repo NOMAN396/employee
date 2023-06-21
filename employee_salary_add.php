@@ -10,7 +10,7 @@
         $month=$_GET['s_month']??date('m');
         $bonus_act=$_GET['bonus']??0;
     ?>
-    <form action="" method="get">
+    <form action="" method="get" class="mb-2">
         <div class="row">
             <div class="col-sm-3">
                 <div class="form-group">

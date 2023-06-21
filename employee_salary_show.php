@@ -10,7 +10,7 @@
         $month=$_GET['s_month']??date('m');
         $bonus_act=$_GET['bonus']??0;
     ?>
-    <form action="" method="get">
+    <form action="" method="get" class="mb-2">
         <div class="row">
             <div class="col-sm-3">
                 <div class="form-group">
@@ -43,7 +43,7 @@
             </div> -->
             <div class="col-sm-3">
                 <div class="form-group"><br>
-                    <button class="btn btn-primary" type="submit">Get List</button>
+                    <button class="btn btn-success" type="submit">Show List</button>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                                     <?= ($dt->basic_salary+$house_rent+$medical_allowance+$bonus)-($pf+$tax) ?>
                                     <input type="hidden" name="total[]" value="<?= ($dt->basic_salary+$house_rent+$medical_allowance+$bonus)-($pf+$tax) ?>">
                                 </td>
-                                <td><a class="btn btn-sm btn-primary" href="employee_payslip.php">Generate Slip</a></td>
+                                <td><a class="btn btn-sm btn-info" href="employee_payslip.php">Generate Slip</a></td>
                             </tr>
                             <?php } } ?>
                         </tbody>
