@@ -11,7 +11,11 @@
         <tr>
             <th>ID</th>
             <th>Designation</th>
-            <th>Basic</th>
+            <th>House Rent</th>
+            <th>Medical Allowance</th>
+            <th>Provident Found</th>
+            <th>Tax</th>
+            <th>Bonus</th>
             <th>Action</th>
         </tr>
         <?php
@@ -22,7 +26,11 @@
         <tr>
             <td><?= $d->id ?></td>
             <td><?= $d->designation ?></td>
-            <td><?= $d->basic ?></td>
+            <td><?= $d->house_rent ?></td>
+            <td><?= $d->medical_allowance ?></td>
+            <td><?= $d->pf ?></td>
+            <td><?= $d->tax ?></td>
+            <td><?= $d->bonus ?></td>
             <td>
                 <a title="Update" href="<?= $base_url?>designation_edit.php?id=<?= $d->id ?>">
                             <i class="fa fa-edit"></i>

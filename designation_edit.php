@@ -33,22 +33,59 @@
                 ?>
 
                 <div class="body">
-                  <div class="row ">
+                    <div class="row ">
                         <div class="col-sm-6">
                             <div class="form-group">
-                            <label>Designation Name</label>
+                            <label><h6>Designation Name</h6></label>
                             <input type="text" name="designation" value="<?= $d->designation ?>"class="form-control">
                         </div>
-                </div>
-                     <div class="row">
+                    </div>
+                    <div class="row">
                         <div class="col-sm-6 d-block">
                             <div class="form-group">
-                            <label>Basic</label>
-                            <input type="text" name="basic" value="<?= $d->basic ?>"class="form-control">
-                            <button type="submit" class="btn btn-primary px-5 my-2">Save</button>
+                            <label><h6>House Rent</h6></label>
+                            <input type="text" name="house_rent" value="<?= $d->house_rent ?>"class="form-control">
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 d-block">
+                            <div class="form-group">
+                            <label><h6>Medical Allowance</h6></label>
+                            <input type="text" name="medical_allowance" value="<?= $d->medical_allowance ?>"class="form-control">
+                            </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 d-block">
+                            <div class="form-group">
+                            <label><h6>Provident Found</h6></label>
+                            <input type="text" name="pf" value="<?= $d->pf ?>"class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 d-block">
+                            <div class="form-group">
+                            <label><h6>Tax</h6></label>
+                            <input type="text" name="tax" value="<?= $d->tax ?>"class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 d-block">
+                            <div class="form-group">
+                            <label><h6>Bonus</h6></label>
+                            <input type="text" name="bonus" value="<?= $d->bonus ?>"class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                          <button type="submit" class="btn btn-success px-5 my-2 form-control">Save</button>
+                      </div>
+                    </div>
+                    
                         
                   </div>
 
