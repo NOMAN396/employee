@@ -8,10 +8,16 @@
     <a href="employee_salary_add.php"class="btn btn-primary align-right">ADD NEW</a>
     <table class="table">
         <tr>
-            <th>#</th>
+            
+        
             <th>Basic</th>
-            <th>Payslip</th>
-            <th>Action</th>
+            <th>House Rent</th>
+            <th>Medical Allowance</th>
+            <th>Bonus</th>
+            <th>Provident Fund</th>
+            <th>Leave deduction</th>
+            <th>Tax</th>
+            <th>Total</th>
         </tr>
         <?php
                   $data=$mysqli->common_select_query("SELECT 
@@ -29,14 +35,15 @@
                     foreach($data['data'] as $d){
                 ?>
         <tr>
-            <td><?= $d->id ?></td>
-            <td><?= $d->first_name ?> <?= $d->last_name ?></td>
-            <td><?= $d->employee_id ?></td>
-            <td><?= $d->email ?></td>
-            <td><?= $d->joining_date ?></td>
-            <td><?= $d->designation ?></td>
-            <td><?= $d->salary ?></td>
-            <td><?= $d->payslip ?></td>
+            
+            <td><?= $d->basic ?> </td>
+            <td><?= $d->house_rent ?></td>
+            <td><?= $d->medical_allowance ?></td>
+            <td><?= $d->bonus ?></td>
+            <td><?= $d->provident_fund ?></td>
+            <td><?= $d->leave_deduction ?></td>
+            <td><?= $d->tax ?></td>
+            <td><?= $d->total ?></td>
             
         </tr>
         <?php } } ?>
