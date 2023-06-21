@@ -18,6 +18,7 @@
             <th>Leave deduction</th>
             <th>Tax</th>
             <th>Total</th>
+            <th>Action</th>
         </tr>
         <?php
                   $data=$mysqli->common_select_query("SELECT 
@@ -44,7 +45,11 @@
             <td><?= $d->leave_deduction ?></td>
             <td><?= $d->tax ?></td>
             <td><?= $d->total ?></td>
-            
+            <td>
+                <a title="Show" href="<?= $base_url?>attendance_show.php?id=<?= $d->att_date ?>">
+                            <i class="fa fa-eye"></i>
+                </a>
+            </td>
         </tr>
         <?php } } ?>
         

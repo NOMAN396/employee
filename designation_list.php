@@ -13,7 +13,7 @@
             <th>Designation</th>
             <th>House Rent</th>
             <th>Medical Allowance</th>
-            <th>Provident Found</th>
+            <th>Provident Fund</th>
             <th>Tax</th>
             <th>Bonus</th>
             <th>Action</th>

@@ -27,6 +27,7 @@
             <th>Employee ID</th>
             <th>Department</th>
             <th>Designation</th>
+            <th>Basic</th>
             <th>Joining Date</th>
             <th>Yearly Leave</th>
             <th>Picture</th>
@@ -51,6 +52,7 @@
             <td><?= $d->employee_id ?></td>
             <td><?= $d->department_name ?></td>
             <td><?= $d->designation ?></td>
+            <td><?= $d->basic_salary ?></td>
             <td><?= $d->joining_date ?></td>
             <td>
                 Leave: <?= $d->yearly_leave ?><br>
