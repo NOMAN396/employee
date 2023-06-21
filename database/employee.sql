@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2023 at 04:23 PM
+-- Generation Time: Jun 21, 2023 at 02:26 PM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1649,7 +1649,8 @@ CREATE TABLE `tbl_leaves` (
 
 INSERT INTO `tbl_leaves` (`id`, `employee_id`, `starting_at`, `ending_on`, `days`, `reason`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
 (1, 25, '2023-06-04', '2023-06-07', 4, 'Personal problem.', NULL, NULL, NULL, NULL, NULL),
-(2, 12, '2023-06-03', '2023-06-06', 4, 'Family emergency.', NULL, NULL, NULL, NULL, NULL);
+(2, 12, '2023-06-03', '2023-06-06', 4, 'Family emergency.', NULL, NULL, NULL, NULL, NULL),
+(3, 1, '2023-06-07', '2023-06-09', 3, 'Personal Problem', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1670,14 +1671,6 @@ CREATE TABLE `tbl_overtime` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_overtime`
---
-
-INSERT INTO `tbl_overtime` (`id`, `employee`, `overtime_date`, `hours`, `type`, `description`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, '22', '2023-06-07', 2, 'Normal ex.2', 'Worked on a new design on emergency basis.', NULL, NULL, NULL, NULL, NULL),
-(2, '10', '2023-06-07', 3, 'Normal ex.3', 'Worked on a new project focusing on fast delivery to client.', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1728,7 +1721,10 @@ CREATE TABLE `tbl_payroll_deductions` (
 --
 
 INSERT INTO `tbl_payroll_deductions` (`id`, `name`, `unit_amount`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Absent amount', 12.00, NULL, NULL, NULL, NULL, '2023-06-12 08:59:51');
+(1, 'Absent amount', 12.00, NULL, NULL, NULL, NULL, '2023-06-12 08:59:51'),
+(2, 'Absent amount', 12.00, NULL, NULL, NULL, NULL, NULL),
+(3, 'Advance', 7.00, NULL, NULL, NULL, NULL, NULL),
+(4, 'Unpaid leave', 3.00, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1752,7 +1748,10 @@ CREATE TABLE `tbl_payroll_overtime` (
 --
 
 INSERT INTO `tbl_payroll_overtime` (`id`, `name`, `rate`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Normal day OT', 'hourly 1.5', NULL, NULL, NULL, NULL, '2023-06-12 08:59:28');
+(1, 'Normal day OT', 'hourly 1.5', NULL, NULL, NULL, NULL, '2023-06-12 08:59:28'),
+(2, 'Normal day OT 1.5x', 'hourly 1.5', NULL, NULL, NULL, NULL, NULL),
+(3, 'Public holiday OT 3x', 'hourly 3', NULL, NULL, NULL, NULL, NULL),
+(4, 'Rest day OT 2x', 'hourly 2', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1779,9 +1778,7 @@ CREATE TABLE `tbl_promotion` (
 --
 
 INSERT INTO `tbl_promotion` (`id`, `promoted_employee`, `department`, `promoted_designation_from`, `promoted_designation_to`, `promotion_date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Ibrahim Khalil', NULL, 'Junior Designer', 'Senior Creative Designer', '2023-06-15', NULL, NULL, NULL, NULL, NULL),
-(2, 'Jasim Uddin', NULL, 'Jr. Web Designer', 'Full Stack Web Developer', '2023-06-16', NULL, NULL, NULL, NULL, NULL),
-(3, 'Noman Hossain', NULL, 'Jr. Wordpress Developer', 'Senior Wp Developer', '2023-06-30', NULL, NULL, NULL, NULL, '2023-06-02 19:32:03');
+(5, '13', '2', '2', '6', '2023-06-08', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1802,6 +1799,13 @@ CREATE TABLE `tbl_resignation` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_resignation`
+--
+
+INSERT INTO `tbl_resignation` (`id`, `resigning_employee`, `department`, `reason`, `notice_date`, `resignation_date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, '12', '3', 'Job switch.', '2023-06-14', '2023-06-20', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1909,6 +1913,13 @@ CREATE TABLE `tbl_termination` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_termination`
+--
+
+INSERT INTO `tbl_termination` (`id`, `terminated_employee`, `department`, `termination_type`, `termination_date`, `reason`, `notice_date`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, '27', '2', 'others', '2023-06-22', 'Poor fit to organizational culture.', '2023-06-15', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2103,13 +2114,13 @@ ALTER TABLE `tbl_holidays`
 -- AUTO_INCREMENT for table `tbl_leaves`
 --
 ALTER TABLE `tbl_leaves`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_overtime`
 --
 ALTER TABLE `tbl_overtime`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_additions`
@@ -2121,25 +2132,25 @@ ALTER TABLE `tbl_payroll_additions`
 -- AUTO_INCREMENT for table `tbl_payroll_deductions`
 --
 ALTER TABLE `tbl_payroll_deductions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_overtime`
 --
 ALTER TABLE `tbl_payroll_overtime`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_promotion`
 --
 ALTER TABLE `tbl_promotion`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_resignation`
 --
 ALTER TABLE `tbl_resignation`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_salary`
@@ -2151,7 +2162,7 @@ ALTER TABLE `tbl_salary`
 -- AUTO_INCREMENT for table `tbl_termination`
 --
 ALTER TABLE `tbl_termination`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_timesheet`
