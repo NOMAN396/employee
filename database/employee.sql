@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2023 at 08:42 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jun 21, 2023 at 04:23 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1506,37 +1506,37 @@ CREATE TABLE `tbl_designations` (
 --
 
 INSERT INTO `tbl_designations` (`id`, `designation`, `house_rent`, `medical_allowance`, `pf`, `tax`, `bonus`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Junior Software Engineer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(2, 'Junior Web Developer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(3, 'Junior UI/UX Designer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(4, 'Junior Database Administrator', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(5, 'Software Engineer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(6, 'Web Developer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(7, 'UI/UX Designer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(8, 'Database Administrator', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(9, 'Senior Software Engineer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(10, 'Senior Web Developer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(11, 'Senior UI/UX Designer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(12, 'Senior Database Administrator', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(13, 'Officer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(14, 'Executive', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(15, 'Senior Executive', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(16, 'Administrative Assistant', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(17, 'System Administrator', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(18, 'Quality Assurance Tester', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(19, 'Project Manager', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(20, 'Team Leader', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(21, 'Business Analyst', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(22, 'Data Analyst', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(23, 'Data Scientist', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(24, 'Data Engineer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(25, 'Database Designer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(26, 'Assistant Manager', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(27, 'Junior Web Designer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(28, 'Senior Web Designer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(29, 'Intern', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(30, 'Senior Officer', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
-(31, 'Senior Executive', 10.00, '5.00', '10.00', '15.00', '50.00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '2023-06-12 07:12:56');
+(1, 'Junior Software Engineer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(2, 'Junior Web Developer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(3, 'Junior UI/UX Designer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(4, 'Junior Database Administrator', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(5, 'Software Engineer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(6, 'Web Developer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(7, 'UI/UX Designer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(8, 'Database Administrator', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(9, 'Senior Software Engineer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(10, 'Senior Web Developer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(11, 'Senior UI/UX Designer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(12, 'Senior Database Administrator', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(13, 'Officer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(14, 'Executive', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(15, 'Senior Executive', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(16, 'Administrative Assistant', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(17, 'System Administrator', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(18, 'Quality Assurance Tester', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(19, 'Project Manager', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(20, 'Team Leader', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(21, 'Business Analyst', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(22, 'Data Analyst', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(23, 'Data Scientist', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(24, 'Data Engineer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(25, 'Database Designer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(26, 'Assistant Manager', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(27, 'Junior Web Designer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(28, 'Senior Web Designer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(29, 'Intern', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(30, 'Senior Officer', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', NULL),
+(31, 'Senior Executive', 10.00, 5.00, 10.00, 15.00, 50.00, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', '2023-06-12 07:12:56');
 
 -- --------------------------------------------------------
 
@@ -1569,33 +1569,33 @@ CREATE TABLE `tbl_employees` (
 --
 
 INSERT INTO `tbl_employees` (`id`, `first_name`, `last_name`, `email`, `phone`, `employee_id`, `department_id`, `designation_id`, `joining_date`, `yearly_leave`, `image`, `basic_salary`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 'Abdullah', 'Ali', 'ali_abdullah22@gmail.com', '01987654525', 'PM11010101', 11, 19, '2011-01-01', 22, NULL, '17000.00', NULL, NULL, NULL, NULL, NULL),
-(2, 'Saiful', 'Islam', 'saiful_islam98@gmail.com', '01898542163', 'PM17010209', 11, 20, '2017-06-01', 22, NULL, '15000.00', NULL, NULL, NULL, NULL, NULL),
-(3, 'Mosharraf', 'Khan', 'mosharraf_khan996@gmail.com', '01789653247', 'AF16120301', 12, 15, '2016-03-01', 22, NULL, '12000.00', NULL, NULL, NULL, NULL, NULL),
-(4, 'Monirul', 'Islam', 'monirul_islam552@gmail.com', '01879451236', 'DA16130102', 13, 15, '2016-01-01', 22, NULL, '20000.00', NULL, NULL, NULL, NULL, NULL),
-(5, 'Hasan', 'Ali', 'ali_hasan766@gmail.com', '01987654321', 'HC14100101', 10, 26, '2014-04-01', 22, NULL, '40000.00', NULL, NULL, NULL, NULL, NULL),
-(6, 'Masud', 'Khan', 'masud_khan11@gmail.com', '01875659832', 'SM17090309', 9, 14, '2017-03-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(7, 'Anwar', 'Hossain', 'anwar_hossain51@gmail.com', '015589632584', 'II15080102', 8, 17, '2015-01-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(8, 'Imran', 'Khan', 'imran_khan111@gmail.com', '01721002773', 'BD13070101', 7, 21, '2013-01-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(9, 'Rezaul', 'Islam', 'rezaul_islam214@gmail.com', '01558796544', 'QA150601', 6, 18, '2015-06-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(10, 'Noman', 'Hossain', 'noman@yahoo.com', '01622875968', 'WD230219', 5, 27, '2023-06-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(11, 'Jasim', 'Uddin', 'jasimuddinm180@gmail.com', '015221875658', 'WD14020113', 2, 10, '2014-04-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(12, 'Rabiul', 'Hossein', 'rabiul@yahoo.com', '01785654987', 'SD18030209', 3, 5, '2018-05-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(13, 'Safayet', 'Ullah', 'safayet@yahoo.com', '01875321657', 'WD22020315', 2, 2, '2022-06-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(14, 'Ibrahim', 'Khalil', 'ikshakil@yahoo.com', '01963852741', 'UD19040102', 4, 11, '2019-02-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(15, 'Raihan', 'Sazzad', 'raihan88@yahoo.com', '01554789631', 'DA19010205', 1, 8, '2019-05-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(16, 'Thouhidul', 'Islam', 'thouhid77@yahoo.com', '01752865324', 'II18080207', 8, 17, '2018-05-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(17, 'Sharmin ', 'Akter', 'sharmin_akter21@gmail.com', '01587658214', 'DA21010217', 1, 25, '2021-06-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(18, 'Maksuda', 'Akter', 'maksuda93@yahoo.com', '01622147862', 'DA22010517', 1, 23, '2022-08-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(19, 'Mahmuda', 'Akter', 'mahmuda97@gmail.com', '01789654123', 'DA22010618', 1, 24, '2022-05-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(20, 'Fahmida', 'Akter', 'fahmida883@gmail.com', '01883214756', 'DA22010419', 1, 22, '2022-08-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(21, 'Mojahidul', 'Islam', 'mojahidul65@yahoo.com', '01954128754', 'SD23030308', 3, 1, '2023-03-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(22, 'Ahtesanul Hoque', 'Kaiser', 'kaiser43@yahoo.com', '01552478963', 'UD20040205', 4, 7, '2020-01-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(23, 'Towhidul', 'Islam', 'towhid_99@yahoo.com', '01721547853', 'SD18030206', 3, 9, '2018-09-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(24, 'Shariful ', 'Islam', 'shariful0606@yahoo.com', '01687541235', 'WD15020106', 2, 10, '2015-03-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(25, 'Tamim', 'Iqbal', 'tamim222@yahoo.com', '01557812439', 'DA17010103', 1, 12, '2017-06-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(26, 'Mushfiqur ', 'Rahim', 'mushfiq66@yahoo.com', '01654987321', 'DA20010211', 1, 8, '2020-03-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL),
-(27, 'Abul', 'Hasan', 'abul_hasan@yahoo.com', '01752941661', 'WD22020316', 2, 2, '2022-09-01', 22, NULL, '0.00', NULL, NULL, NULL, NULL, NULL);
+(1, 'Abdullah', 'Ali', 'ali_abdullah22@gmail.com', '01987654525', 'PM11010101', 11, 19, '2011-01-01', 22, NULL, 17000.00, NULL, NULL, NULL, NULL, NULL),
+(2, 'Saiful', 'Islam', 'saiful_islam98@gmail.com', '01898542163', 'PM17010209', 11, 20, '2017-06-01', 22, NULL, 15000.00, NULL, NULL, NULL, NULL, NULL),
+(3, 'Mosharraf', 'Khan', 'mosharraf_khan996@gmail.com', '01789653247', 'AF16120301', 12, 15, '2016-03-01', 22, NULL, 12000.00, NULL, NULL, NULL, NULL, NULL),
+(4, 'Monirul', 'Islam', 'monirul_islam552@gmail.com', '01879451236', 'DA16130102', 13, 15, '2016-01-01', 22, NULL, 20000.00, NULL, NULL, NULL, NULL, NULL),
+(5, 'Hasan', 'Ali', 'ali_hasan766@gmail.com', '01987654321', 'HC14100101', 10, 26, '2014-04-01', 22, NULL, 40000.00, NULL, NULL, NULL, NULL, NULL),
+(6, 'Masud', 'Khan', 'masud_khan11@gmail.com', '01875659832', 'SM17090309', 9, 14, '2017-03-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(7, 'Anwar', 'Hossain', 'anwar_hossain51@gmail.com', '015589632584', 'II15080102', 8, 17, '2015-01-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(8, 'Imran', 'Khan', 'imran_khan111@gmail.com', '01721002773', 'BD13070101', 7, 21, '2013-01-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(9, 'Rezaul', 'Islam', 'rezaul_islam214@gmail.com', '01558796544', 'QA150601', 6, 18, '2015-06-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(10, 'Noman', 'Hossain', 'noman@yahoo.com', '01622875968', 'WD230219', 5, 27, '2023-06-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(11, 'Jasim', 'Uddin', 'jasimuddinm180@gmail.com', '015221875658', 'WD14020113', 2, 10, '2014-04-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(12, 'Rabiul', 'Hossein', 'rabiul@yahoo.com', '01785654987', 'SD18030209', 3, 5, '2018-05-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(13, 'Safayet', 'Ullah', 'safayet@yahoo.com', '01875321657', 'WD22020315', 2, 2, '2022-06-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(14, 'Ibrahim', 'Khalil', 'ikshakil@yahoo.com', '01963852741', 'UD19040102', 4, 11, '2019-02-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(15, 'Raihan', 'Sazzad', 'raihan88@yahoo.com', '01554789631', 'DA19010205', 1, 8, '2019-05-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(16, 'Thouhidul', 'Islam', 'thouhid77@yahoo.com', '01752865324', 'II18080207', 8, 17, '2018-05-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(17, 'Sharmin ', 'Akter', 'sharmin_akter21@gmail.com', '01587658214', 'DA21010217', 1, 25, '2021-06-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(18, 'Maksuda', 'Akter', 'maksuda93@yahoo.com', '01622147862', 'DA22010517', 1, 23, '2022-08-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(19, 'Mahmuda', 'Akter', 'mahmuda97@gmail.com', '01789654123', 'DA22010618', 1, 24, '2022-05-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(20, 'Fahmida', 'Akter', 'fahmida883@gmail.com', '01883214756', 'DA22010419', 1, 22, '2022-08-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(21, 'Mojahidul', 'Islam', 'mojahidul65@yahoo.com', '01954128754', 'SD23030308', 3, 1, '2023-03-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(22, 'Ahtesanul Hoque', 'Kaiser', 'kaiser43@yahoo.com', '01552478963', 'UD20040205', 4, 7, '2020-01-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(23, 'Towhidul', 'Islam', 'towhid_99@yahoo.com', '01721547853', 'SD18030206', 3, 9, '2018-09-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(24, 'Shariful ', 'Islam', 'shariful0606@yahoo.com', '01687541235', 'WD15020106', 2, 10, '2015-03-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(25, 'Tamim', 'Iqbal', 'tamim222@yahoo.com', '01557812439', 'DA17010103', 1, 12, '2017-06-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(26, 'Mushfiqur ', 'Rahim', 'mushfiq66@yahoo.com', '01654987321', 'DA20010211', 1, 8, '2020-03-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL),
+(27, 'Abul', 'Hasan', 'abul_hasan@yahoo.com', '01752941661', 'WD22020316', 2, 2, '2022-09-01', 22, NULL, 0.00, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1632,10 +1632,8 @@ INSERT INTO `tbl_holidays` (`id`, `holiday_name`, `holiday_date`, `created_at`, 
 CREATE TABLE `tbl_leaves` (
   `id` int(50) NOT NULL,
   `employee_id` int(11) DEFAULT NULL,
-  `leave_type` varchar(20) NOT NULL,
-  `leave_category` varchar(20) NOT NULL,
-  `start_date` date DEFAULT NULL,
-  `end_date` date DEFAULT NULL,
+  `starting_at` date DEFAULT NULL,
+  `ending_on` date DEFAULT NULL,
   `days` int(15) DEFAULT NULL,
   `reason` text DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
@@ -1644,6 +1642,14 @@ CREATE TABLE `tbl_leaves` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_leaves`
+--
+
+INSERT INTO `tbl_leaves` (`id`, `employee_id`, `starting_at`, `ending_on`, `days`, `reason`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, 25, '2023-06-04', '2023-06-07', 4, 'Personal problem.', NULL, NULL, NULL, NULL, NULL),
+(2, 12, '2023-06-03', '2023-06-06', 4, 'Family emergency.', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1664,6 +1670,14 @@ CREATE TABLE `tbl_overtime` (
   `updated_by` varchar(255) DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_overtime`
+--
+
+INSERT INTO `tbl_overtime` (`id`, `employee`, `overtime_date`, `hours`, `type`, `description`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
+(1, '22', '2023-06-07', 2, 'Normal ex.2', 'Worked on a new design on emergency basis.', NULL, NULL, NULL, NULL, NULL),
+(2, '10', '2023-06-07', 3, 'Normal ex.3', 'Worked on a new project focusing on fast delivery to client.', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1820,60 +1834,60 @@ CREATE TABLE `tbl_salary` (
 --
 
 INSERT INTO `tbl_salary` (`id`, `employee_id`, `basic`, `house_rent`, `medical_allowance`, `bonus`, `provident_fund`, `leave_deduction`, `tax`, `total`, `s_year`, `s_month`, `created_at`, `created_by`, `updated_at`, `updated_by`, `deleted_at`) VALUES
-(1, 1, 17000.00, 1700.00, 850.00, 8500.00, 1700.00, 0.00, 2550.00, 23800.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(2, 2, 15000.00, 1500.00, 750.00, 7500.00, 1500.00, 1500.00, 2250.00, 21000.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(3, 3, 12000.00, 1200.00, 600.00, 6000.00, 1200.00, 0.00, 1800.00, 16800.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(4, 4, 20000.00, 2000.00, 1000.00, 10000.00, 2000.00, 1333.00, 3000.00, 28000.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(5, 5, 40000.00, 4000.00, 2000.00, 20000.00, 4000.00, 4000.00, 6000.00, 56000.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(6, 6, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(7, 7, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(8, 8, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(9, 9, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(10, 10, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(11, 11, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(12, 12, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(13, 13, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(14, 14, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(15, 15, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(16, 16, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(17, 17, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(18, 18, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(19, 19, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(20, 20, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(21, 21, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(22, 22, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(23, 23, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(24, 24, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(25, 25, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(26, 26, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(27, 27, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '5', NULL, NULL, NULL, NULL, NULL),
-(28, 1, 17000.00, 1700.00, 850.00, 8500.00, 1700.00, 0.00, 2550.00, 23800.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(29, 2, 15000.00, 1500.00, 750.00, 7500.00, 1500.00, 0.00, 2250.00, 21000.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(30, 3, 12000.00, 1200.00, 600.00, 6000.00, 1200.00, 0.00, 1800.00, 16800.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(31, 4, 20000.00, 2000.00, 1000.00, 10000.00, 2000.00, 0.00, 3000.00, 28000.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(32, 5, 40000.00, 4000.00, 2000.00, 20000.00, 4000.00, 0.00, 6000.00, 56000.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(33, 6, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(34, 7, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(35, 8, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(36, 9, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(37, 10, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(38, 11, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(39, 12, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(40, 13, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(41, 14, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(42, 15, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(43, 16, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(44, 17, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(45, 18, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(46, 19, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(47, 20, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(48, 21, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(49, 22, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(50, 23, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(51, 24, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(52, 25, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(53, 26, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL),
-(54, 27, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 2023, '6', NULL, NULL, NULL, NULL, NULL);
+(1, 1, 17000.00, 1700.00, 850.00, 8500.00, 1700.00, 0.00, 2550.00, 23800.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(2, 2, 15000.00, 1500.00, 750.00, 7500.00, 1500.00, 1500.00, 2250.00, 21000.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(3, 3, 12000.00, 1200.00, 600.00, 6000.00, 1200.00, 0.00, 1800.00, 16800.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(4, 4, 20000.00, 2000.00, 1000.00, 10000.00, 2000.00, 1333.00, 3000.00, 28000.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(5, 5, 40000.00, 4000.00, 2000.00, 20000.00, 4000.00, 4000.00, 6000.00, 56000.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(6, 6, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(7, 7, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(8, 8, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(9, 9, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(10, 10, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(11, 11, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(12, 12, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(13, 13, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(14, 14, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(15, 15, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(16, 16, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(17, 17, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(18, 18, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(19, 19, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(20, 20, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(21, 21, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(22, 22, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(23, 23, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(24, 24, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(25, 25, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(26, 26, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(27, 27, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '5', NULL, NULL, NULL, NULL, NULL),
+(28, 1, 17000.00, 1700.00, 850.00, 8500.00, 1700.00, 0.00, 2550.00, 23800.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(29, 2, 15000.00, 1500.00, 750.00, 7500.00, 1500.00, 0.00, 2250.00, 21000.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(30, 3, 12000.00, 1200.00, 600.00, 6000.00, 1200.00, 0.00, 1800.00, 16800.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(31, 4, 20000.00, 2000.00, 1000.00, 10000.00, 2000.00, 0.00, 3000.00, 28000.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(32, 5, 40000.00, 4000.00, 2000.00, 20000.00, 4000.00, 0.00, 6000.00, 56000.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(33, 6, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(34, 7, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(35, 8, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(36, 9, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(37, 10, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(38, 11, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(39, 12, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(40, 13, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(41, 14, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(42, 15, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(43, 16, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(44, 17, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(45, 18, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(46, 19, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(47, 20, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(48, 21, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(49, 22, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(50, 23, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(51, 24, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(52, 25, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(53, 26, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL),
+(54, 27, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, '2023', '6', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2089,13 +2103,13 @@ ALTER TABLE `tbl_holidays`
 -- AUTO_INCREMENT for table `tbl_leaves`
 --
 ALTER TABLE `tbl_leaves`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_overtime`
 --
 ALTER TABLE `tbl_overtime`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_payroll_additions`
