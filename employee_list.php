@@ -19,7 +19,7 @@
     </div>
     <table class="table">
         <tr>
-            <th>ID</th>
+            <th>#</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
