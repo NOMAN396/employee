@@ -6,72 +6,66 @@
         <li class="breadcrumb-item active">ApplyLeave</li>
     </ol>
     <form method="post" class="form-valide w-75 justify-content-center">
-                      
-            <div class="form-group row">
-                <div class="col-3">
-                    <label for="leave-type"><b>Leave Type</b><span class="text-danger">*</span>
-                    </label>
+            <div class="form-group">
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label>Leave Type:</label>
+                            <!-- <input type="text" name="leave_type" class="form-control"> -->
+                            <select name="leave_type" id="">
+                                <option value="cl">Cl</option>
+                                <option value="sl">Sl</option>
+                                <option value="others">Others</option>
+                            </select>
+                            </div>
+                        </div>
                 </div>
-                <div class="col-9">
-                        <select class="form-control" id="" name="leave-type" >
-                            <option value="">Select Leave Type</option>
-                            <option  value="CL">CL</option>
-                            <option  value="EL">SL</option>
-                            <option  value="Others">Others</option>
-                        </select>
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label>Leave Category:</label>
+                            <input type="text" name="leave_category" class="form-control">
+                            </div>
+                        </div>
                 </div>
-            </div>  
-            <div class="form-group row mt-2">
-                <div class="col-3">
-                    <label><b>Leave Category</b><span class="text-danger">*</span></label>
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label>Start Date:</label>
+                            <input type="date" name="start_date" class="form-control">
+                            </div>
+                        </div>
                 </div>
-                <div class="col-9">
-                    <select class="form-control" id="" name="leave_category">
-                            <option  value="">Select Leave Category</option>
-                            <option  value="Full Day">Full Day</option>
-                            <option  value="Half Day">Half Day</option>
-                    </select>
-               </div>
-            </div>
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label>End Date:</label>
+                            <input type="date" name="End_date" class="form-control">
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label>Leave day:</label>
+                            <input type="number" name="leave_date" class="form-control">
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label>Description:</label>
+                            <input type="text" name="description" class="form-control">
+                            </div>
+                        </div>
+                </div>
+                <button type="submit" class="btn btn-primary text-center my-1 px-5 py-1">Save</button>
+            </div>       
            
-            <div class="form-group row mt-2">
-                <div class="col-3">
-                    <label><b>Leave Start Date</b><span class="text-danger">*</span></label>
-                </div> 
-                <div class="col-9">
-                    <input type="date" class="form-control" id="start_date" name="start-date" placeholder="Select Leave Start Date">
-                </div>
-            </div>
-                                        
-            <div class="form-group row mt-2">
-                <div class="col-3">
-                    <label><b>Leave End Date </b><span class="text-danger">*</span></label>
-                </div>
-                <div class="col-9">  
-                        <input type="date" class="form-control" id="end_date" name="end-date" placeholder="Select Leave End Date">
-                </div>
-            </div>
-            
-                                        
-                                        
-                <div class="form-group row mt-2">
-                    <div class="col-3">
-                        <label><b>Description </b><span class="text-danger">*</span>
-                        </label>
-                    </div> 
-                    <div class="col-9">     
-                            <textarea rows="3" name="remarks" id="remarks" class="form-control" placeholder="Enter a Remarks.." ></textarea>
-                    </div>  
-                </div>
-                           
-                <div class="form-group row mt-2">
-                       
-                            <button type="submit" name="" class="btn btn-primary">Submit</button>
-                       
-                </div>
         <?php
             if($_POST){
-            $rs=$mysqli->common_create('tbl_leaves',$_POST);
+            $rs=$mysqli->common_create('user_leave_details',$_POST);
             if(!$rs['error']){
               echo "<script>window.location='view_leave.php'</script>";
             }else{

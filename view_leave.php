@@ -5,8 +5,6 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Page Name</li>
     </ol>
-    <a href="holiday_add.php"
-    button type="submit" class="btn btn-primary mb-3">Add New</a>
     <table class="table table-bordered" width="100%">
             <tr>
                 <th>S.No.</th>
@@ -14,23 +12,25 @@
                 <th>Leave Category</th>
                 <th>Leave Start Date</th>
                 <th>Leave End Date</th>
+                <th>Leave Day</th>
                 <th>Description</th>
                 <th>Status</th>
+                <th>Action</th>
             </tr>
         <?php
-                  $data=$mysqli->common_select('tbl_leaves');
+                  $data=$mysqli->common_select('user_leave_details');
                if(!$data['error']){
                     foreach($data['data'] as $d){
                 ?>
         <tr>
             <td><?= $d->id ?></td>
-            <td><?= $d->employee_id ?></td>
             <td><?= $d->leave_type ?></td>
             <td><?= $d->leave_category ?></td>
             <td><?= $d->start_date ?></td>
             <td><?= $d->end_date ?></td>
-            <td><?= $d->days ?></td>
-            <td><?= $d->reason ?></td>
+            <td><?= $d->leave_date ?></td>
+            <td><?= $d->description ?></td>
+            <td><?= $d->status ?></td>
             <td>
                 <a title="Update" href="<?= $base_url?>#?id=<?= $d->id ?>">
                            Pending
