@@ -20,7 +20,7 @@
     <table class="table table-striped table-bordered">
         <thead class="bg-dark text-white">
             <tr>
-                <th>ID</th>
+                <th>#</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>

@@ -63,6 +63,7 @@
                             <th>(-)<br> Leave Deduction</th>
                             <th>(-)<br>  Tax</th>
                             <th>Total</th>
+                            <th>Action</th>
                         </tr>
                         <tbody>
                             <?php
@@ -131,6 +132,7 @@
                                     <?= ($dt->basic_salary+$house_rent+$medical_allowance+$bonus)-($pf+$tax) ?>
                                     <input type="hidden" name="total[]" value="<?= ($dt->basic_salary+$house_rent+$medical_allowance+$bonus)-($pf+$tax) ?>">
                                 </td>
+                                <td><a class="btn btn-sm btn-primary" href="employee_payslip.php">Generate Slip</a></td>
                             </tr>
                             <?php } } ?>
                         </tbody>
