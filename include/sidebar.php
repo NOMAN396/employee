@@ -40,7 +40,7 @@
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link" href="<?= $base_url?>employee_salary_list.php">Employee salary</a>
 							<a class="nav-link" href="employee_payslip.php">Payslip</a>
-							<a class="nav-link" href="<?= $base_url?>payroll_additions.php">Payroll Items</a>
+							<!-- <a class="nav-link" href="<?= $base_url?>payroll_additions.php">Payroll Items</a> -->
 						</nav>
 					</div><br>
 					
