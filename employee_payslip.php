@@ -4,7 +4,7 @@
     <h1 class="mt-4">
 		Payslip
 		<div class="btn-group btn-group-sm float-end">
-			<button class="btn btn-white"><i class="fa fa-print fa-lg"></i> Print</button>
+			<button class="btn btn-white" onClick="window.print()"><i class="fa fa-print fa-lg"></i> Print</button>
 		</div>
 	</h1>
     <ol class="breadcrumb mb-4">
@@ -71,16 +71,16 @@
 											<td><strong>Basic Salary</strong> <span class="float-right"> <?= $d->basic ?></span></td>
 										</tr>
 										<tr>
-											<td><strong>House Rent Allowance</strong> <span class="float-right">$55</span></td>
+											<td><strong>House Rent Allowance</strong> <span class="float-right"><?= $d->house_rent ?></span></td>
 										</tr>
 										<tr>
-											<td><strong>Medical Allowance</strong> <span class="float-right">$55</span></td>
+											<td><strong>Medical Allowance</strong> <span class="float-right"><?=$d->medical_allowance ?></span></td>
 										</tr>
 										<tr>
-											<td><strong>Bonus</strong> <span class="float-right">$55</span></td>
+											<td><strong>Bonus</strong> <span class="float-right"><?= $d->bonus ?></span></td>
 										</tr>
 										<tr>
-											<td><strong>Total Earnings:</strong> <span class="float-right"><strong>$55</strong></span></td>
+											<td><strong>Total Earnings:</strong> <span class="float-right"><strong><?= ($d->basic + $d->house_rent + $d->medical_allowance  ) ?></strong></span></td>
 										</tr>
 									</tbody>
 								</table>
@@ -92,24 +92,23 @@
 								<table class="table table-bordered">
 									<tbody>
 										<tr>
-											<td><strong>Provident Fund</strong> <span class="float-right">$0</span></td>
+											<td><strong>Provident Fund</strong> <span class="float-right"><?= $d->provident_fund ?></span></td>
 										</tr>
 										<tr>
-											<td><strong>Tax</strong> <span class="float-right">$0</span></td>
+											<td><strong>Tax</strong> <span class="float-right"><?= $d->tax ?></span></td>
 										</tr>
 										<tr>
-											<td><strong>Leave deduction</strong> <span class="float-right">$0</span></td>
+											<td><strong>Leave deduction</strong> <span class="float-right"><?= $d->leave_deduction ?></span></td>
 										</tr>
-										
 										<tr>
-											<td><strong>Total Deductions:</strong> <span class="float-right"><strong>$59698</strong></span></td>
+											<td><strong>Total Deductions:</strong> <span class="float-right"><strong><?= ($d->provident_fund + $d->tax + $d->leave_deduction )  ?></strong></span></td>
+										</tr>
+										<tr>
+									<td>	<strong>Net Salary: <?= $d->total ?></strong> </td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-						</div>
-						<div class="col-sm-12">
-							<p><strong>Net Salary: $59698</strong> (Fifty nine thousand six hundred and ninety eight only.)</p>
 						</div>
 					</div>
 				</div>
