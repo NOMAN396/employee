@@ -6,41 +6,22 @@
         <li class="breadcrumb-item active">Employee salary</li>
     </ol>
     <?php
-        $year=$_GET['s_year']??date('Y');
-        $month=$_GET['s_month']??date('m');
-        $bonus_act=$_GET['bonus']??0;
+        $year=$_GET['year'];
+        $month=$_GET['month'];
     ?>
     <form action="" method="get" class="mb-2">
         <div class="row">
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="">Salary Year</label>
-                    <select class="form-control" name="s_year">
-                        <?php for($i=2022; $i <= date('Y'); $i++){ ?>
-                        <option value="<?= $i ?>" <?= $year==$i?"selected":"" ?>><?= $i ?></option>
-                        <?php } ?>
-                    </select>
+                    <h5>Salary Year : <?= $year ?></h5>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="">Salary Month</label>
-                    <select class="form-control" name="s_month">
-                        <?php for($i=1; $i <= 12; $i++){ ?>
-                        <option value="<?= $i ?>" <?= $month==$i?"selected":"" ?>><?= date('F', mktime(0, 0, 0, $i, 10)); ?></option>
-                        <?php } ?>
-                    </select>
+                    <h5>Salary Year : <?= date('F', mktime(0, 0, 0, $month, 10)); ?></h5>
                 </div>
             </div>
-            <!-- <div class="col-sm-3">
-                <div class="form-group">
-                    <label for="">Bonus</label>
-                    <select class="form-control" name="bonus">
-                        <option value="0" <?= $bonus_act==0?"selected":"" ?>>No</option>
-                        <option value="1" <?= $bonus_act==1?"selected":"" ?>>Yes</option>
-                    </select>
-                </div>
-            </div> -->
+            
             <div class="col-sm-3">
                 <div class="form-group"><br>
                     <button class="btn btn-success" type="submit">Show List</button>
@@ -67,72 +48,28 @@
                         </tr>
                         <tbody>
                             <?php
-                                
-                                $data=$mysqli->common_select_query("SELECT tbl_employees.id,
-                                    (select count(*) from tbl_attendance where
-                                     tbl_attendance.employee_id=tbl_employees.id
-                                      and tbl_attendance.att_status=0
-                                       and month(tbl_attendance.att_date)=$month
-                                       and year(tbl_attendance.att_date)=$year
-                                       ) as absent,
-                                 tbl_employees.first_name, tbl_employees.last_name, tbl_employees.phone, tbl_employees.basic_salary,tbl_employees.yearly_leave, tbl_designations.house_rent, 
-                                tbl_designations.medical_allowance,tbl_designations.designation,tbl_designations.pf,tbl_designations.bonus,
-                                tbl_designations.tax FROM `tbl_employees`
-                                join tbl_designations on tbl_designations.id=tbl_employees.designation_id
-                                WHERE tbl_employees.deleted_at is null");
+                                $data=$mysqli->common_select_query("SELECT tbl_salary.*,tbl_employees.first_name,tbl_employees.last_name, tbl_employees.phone FROM `tbl_salary`
+                                join tbl_employees on tbl_employees.id=tbl_salary.employee_id
+                                where tbl_salary.s_year=$year and tbl_salary.s_month=$month",);
                                 if(!$data['error']){
                                     foreach($data['data'] as $dt){
-                                        $house_rent=($dt->basic_salary*($dt->house_rent/100));
-                                        $medical_allowance=($dt->basic_salary*($dt->medical_allowance/100));
-                                        $bonus=$bonus_act?($dt->basic_salary*($dt->bonus/100)):0;
-                                        $pf=($dt->basic_salary*($dt->pf/100));
-                                        $tax=($dt->basic_salary*($dt->tax/100));
-                                        $per_month_leave_allowed=ceil($dt->yearly_leave/12);
-                                        $leav_d=0;
-                                        $leav="";
-                                        if($dt->absent > $per_month_leave_allowed){
-                                            $leav=($dt->absent - $per_month_leave_allowed);
-                                            $leav_d=round($leav * ($dt->basic_salary / 30));
-                                        }
                             ?>
                             <tr>
                                 <td>
                                     <?= $dt->first_name ?> <?= $dt->last_name ?> (<?= $dt->phone ?>)
                                     <input type="hidden" name="employee_id[]" value="<?= $dt->id ?>">
                                 </td>
+                                <td><?= $dt->basic ?></td>
+                                <td><?= $dt->house_rent ?></td>
+                                <td><?= $dt->medical_allowance ?></td>
+                                <td><?= $dt->bonus ?></td>
+                                <td><?= $dt->provident_fund ?></td>
+                                <td><?= $dt->leave_deduction ?></td>
+                                <td><?= $dt->tax ?></td>
+                                <td><?= $dt->total ?></td>
                                 <td>
-                                    <?= $dt->basic_salary ?>
-                                    <input type="hidden" name="basic_salary[]" value="<?= $dt->basic_salary ?>">
+                                    <a class="btn btn-sm btn-info" href="employee_payslip.php?id=<?= $dt->id ?>">Generate Slip</a>
                                 </td>
-                                <td>
-                                    (<?= $dt->house_rent ?>%) <br> <?= $house_rent ?>
-                                    <input type="hidden" name="house_rent[]" value="<?= $house_rent ?>">
-                                </td>
-                                <td>
-                                    (<?= $dt->medical_allowance ?>%) <br> <?= $medical_allowance ?>
-                                    <input type="hidden" name="medical_allowance[]" value="<?= $medical_allowance ?>">
-                                </td>
-                                <td>
-                                    <?php if($bonus_act){ ?>(<?= $dt->bonus ?>%) <br> <?= $bonus ?> <?php } ?>
-                                    <input type="hidden" name="bonus[]" value="<?= $bonus ?>">
-                                </td>
-                                <td>
-                                    (<?= $dt->pf ?>%) <br> <?= $pf ?>
-                                    <input type="hidden" name="pf[]" value="<?= $pf ?>">
-                                </td>
-                                <td>
-                                    <?php if($leav){ ?>(<?= $leav ?>Days)<?php } ?> <br> <?= $leav_d ?>
-                                    <input type="hidden" name="leav_d[]" value="<?= $leav_d ?>">
-                                </td>
-                                <td>
-                                    (<?= $dt->tax ?>%) <br> <?= $tax ?>
-                                    <input type="hidden" name="tax[]" value="<?= $tax ?>">
-                                </td>
-                                <td>
-                                    <?= ($dt->basic_salary+$house_rent+$medical_allowance+$bonus)-($pf+$tax) ?>
-                                    <input type="hidden" name="total[]" value="<?= ($dt->basic_salary+$house_rent+$medical_allowance+$bonus)-($pf+$tax) ?>">
-                                </td>
-                                <td><a class="btn btn-sm btn-info" href="employee_payslip.php">Generate Slip</a></td>
                             </tr>
                             <?php } } ?>
                         </tbody>

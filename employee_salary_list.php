@@ -52,8 +52,8 @@
                     <td><?= $d->tax ?></td>
                     <td><?= $d->total ?></td>
                     <td>
-                        <a title="Show" href="<?= $base_url?>employee_salary_show.php?id=">
-                                    <i class="fa fa-eye"></i>
+                        <a title="Show" href="<?= $base_url?>employee_salary_show.php?year=<?= $d->s_year ?>&month=<?= $d->s_month ?>">
+                            <i class="fa fa-eye"></i>
                         </a>
                     </td>
                 </tr>
