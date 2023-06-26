@@ -21,12 +21,6 @@
                     <h5>Salary Year : <?= date('F', mktime(0, 0, 0, $month, 10)); ?></h5>
                 </div>
             </div>
-            
-            <div class="col-sm-3">
-                <div class="form-group"><br>
-                    <button class="btn btn-success" type="submit">Show List</button>
-                </div>
-            </div>
         </div>
     </form>
     <form method="post" action="">
@@ -82,9 +76,6 @@
         
         <input type="hidden" name="s_year" value="<?= $year ?>">
         <input type="hidden" name="s_month" value="<?= $month ?>">
-        <!-- <div class="submit-section">
-            <button type="submit" class="btn btn-primary px-5 my-2">Submit</button>
-        </div> -->
     </form>
 
     <?php

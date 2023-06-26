@@ -24,7 +24,7 @@
 							<!-- <a  class="nav-link" href="<?= $base_url?>holidays_list.php">Holidays</a> -->
 							<a class="nav-link" href="<?= $base_url?>department_list.php">Departments</a>
 							<a class="nav-link" href="<?= $base_url?>designation_list.php">Designations</a>
-							<a class="nav-link" href="<?= $base_url?>manage_leave.php">Manage Leave</a>
+							<!-- <a class="nav-link" href="<?= $base_url?>manage_leave.php">Manage Leave</a> -->
 							<!-- <a class="nav-link" href="<?= $base_url?>timesheet.php">timesheet</a> -->
 							<a class="nav-link" href="<?= $base_url?>overtime_list.php"> Employee Overtime</a>
 						</nav>
@@ -39,7 +39,7 @@
 					<div class="collapse" id="colhr" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 						<nav class="sb-sidenav-menu-nested nav">
 							<a class="nav-link" href="<?= $base_url?>employee_salary_list.php">Employee salary</a>
-							<a class="nav-link" href="employee_payslip.php">Payslip</a>
+							<!-- <a class="nav-link" href="employee_payslip.php">Payslip</a> -->
 							<!-- <a class="nav-link" href="<?= $base_url?>payroll_additions.php">Payroll Items</a> -->
 						</nav>
 					</div><br>
