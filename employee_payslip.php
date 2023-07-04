@@ -4,7 +4,7 @@
     <h1 class="mt-4">
 		Payslip
 		<div class="btn-group btn-group-sm float-end">
-			<button class="btn btn-white" onClick="window.print()"><i class="fa fa-print fa-lg"></i> Print</button>
+			<button class="btn btn-white" onClick="print_page()"><i class="fa fa-print fa-lg"></i> Print</button>
 		</div>
 	</h1>
     <ol class="breadcrumb mb-4">
@@ -32,13 +32,13 @@
 		}
 	?>	
 	<!-- /Page Header -->
-	<div class="row">
+	<div class="row" id="pay_print">
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-body">
 					<h4 class="payslip-title">Payslip for the month of <?= date('F', mktime(0, 0, 0, $d->s_month, 10)); ?> <?= $d->s_year ?></h4>
 					<div class="row">
-						<div class="col-sm-6 m-b-20">
+						<div class="col-6 m-b-20">
 							<img src="assets/img/logo2.png" style="width:80px" class="inv-logo" alt="">
 							<ul class="list-unstyled mb-0">
 								<li>Dreamguy's Technologies</li>
@@ -46,7 +46,7 @@
 								<li>Sherman Oaks, CA, 91403</li>
 							</ul>
 						</div>
-						<div class="col-sm-6 m-b-20">
+						<div class="col-6 m-b-20">
 							<div class="invoice-details">
 								<h3 class="text-uppercase">Payslip #<?= $d->id ?></h3>
 								<ul class="list-unstyled">
@@ -62,7 +62,7 @@
 					</div>
 					
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-6">
 							<div>
 								<h4 class="m-b-10"><strong>Earnings</strong></h4>
 								<table class="table table-bordered">
@@ -86,7 +86,7 @@
 								</table>
 							</div>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-6">
 							<div>
 								<h4 class="m-b-10"><strong>Deductions</strong></h4>
 								<table class="table table-bordered">
@@ -103,8 +103,26 @@
 										<tr>
 											<td><strong>Total Deductions:</strong> <span class="float-right"><strong><?= ($d->provident_fund + $d->tax + $d->leave_deduction )  ?></strong></span></td>
 										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-12">
+							<div>
+								<h4 class="m-b-10"></h4>
+								<table class="table table-bordered">
+									<tbody>
 										<tr>
-									<td>	<strong>Net Salary: <?= $d->total ?></strong> </td>
+											<td><strong>Net Salary</strong></td>
+											<td><strong class="text-end"><?= $d->total ?></strong> </td>
+										</tr>
+										<tr>
+											<td><strong>(In Word): 
+												<?php
+													$f = new NumberFormatter("en", NumberFormatter::SPELLOUT);
+													echo $f->format($d->total);
+												?></strong>
+											</td>
 										</tr>
 									</tbody>
 								</table>
@@ -118,4 +136,15 @@
 
 </div>
 <?php require_once('include/footer.php') ?>
-                
+<script>
+	function print_page(){
+		var prtContent = document.getElementById("pay_print");
+		var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+		WinPrint.document.write('<link href="<?= $base_url?>assets/css/styles.css" rel="stylesheet" />');
+		WinPrint.document.write(prtContent.innerHTML);
+		WinPrint.document.close();
+		WinPrint.focus();
+		WinPrint.print();
+		WinPrint.close();
+	}
+</script>        
