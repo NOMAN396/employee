@@ -80,7 +80,7 @@
 											<td><strong>Bonus</strong> <span class="float-right"><?= $d->bonus ?></span></td>
 										</tr>
 										<tr>
-											<td><strong>Total Earnings:</strong> <span class="float-right"><strong><?= ($d->basic + $d->house_rent + $d->medical_allowance  ) ?></strong></span></td>
+											<td><strong>Total Earnings:</strong> <span class="float-right"><strong><?= ($d->basic + $d->house_rent + $d->medical_allowance+ $d->bonus  ) ?></strong></span></td>
 										</tr>
 									</tbody>
 								</table>
