@@ -12,11 +12,12 @@
             <tr>
                 <th>ID</th>
                 <th>Designation</th>
-                <th>House Rent</th>
-                <th>Medical Allowance</th>
-                <th>Provident Fund</th>
-                <th>Tax</th>
-                <th>Bonus</th>
+                <th>Basic</th>
+                <th>House Rent(%)</th>
+                <th>Medical Allowance(%)</th>
+                <th>Provident Fund(%)</th>
+                <th>Tax(%)</th>
+                <th>Bonus(%)</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -29,6 +30,7 @@
             <tr>
                 <td><?= $d->id ?></td>
                 <td><?= $d->designation ?></td>
+                <td><?= $d->basic ?></td>
                 <td><?= $d->house_rent ?></td>
                 <td><?= $d->medical_allowance ?></td>
                 <td><?= $d->pf ?></td>
