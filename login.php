@@ -49,13 +49,14 @@
                                                 $_SESSION['contact']=$rs['data'][0]->contact_no;
                                                 $_SESSION['email']=$rs['data'][0]->email;
                                                 $_SESSION['image']=$rs['data'][0]->image;
-                                                }
                                                 echo "<script>window.location='index.php'</script>";
-                                            }else{
-                                                echo $rs['error'];
+                                            } else {
+                                                echo "<script>alert('Incorrect email or password. Please try again.');</script>";
                                             }
-                                            }
-
+                                        } else {
+                                            echo $rs['error'];
+                                        }
+                                    }
                                         ?>
                                     </div>
                                     <div class="card-footer text-center py-3">
