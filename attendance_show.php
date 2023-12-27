@@ -5,7 +5,6 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Attendance list For <?= $_GET['id'] ?></li>
     </ol>
-    
     <table class="table">
         <tr>
             <th>#SL</th>
@@ -20,7 +19,7 @@
                   where `att_date`='".$_GET['id']."'");
                if(!$data['error']){
                     foreach($data['data'] as $i=>$d){
-                ?>
+        ?>
         <tr>
             <td><?= ++$i ?></td>
             <td><?= $d->employee_id ?> - <?= $d->first_name ?> <?= $d->last_name ?></td>
